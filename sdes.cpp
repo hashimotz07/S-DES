@@ -12,6 +12,11 @@ int permuta(int n, vector<int> v, int total_bits){
     return resultado;
 }
 
+/*deslocamento circular*/
+int deslocamento_circular(int n, int tamanho, int shift){
+    return ((n>>shift) | (n>>(tamanho - shift))) & ((1<<tamanho)-1);
+}
+
 int main(){
     inacio;
     int chave = 1010000010; //chave de 10 bits
