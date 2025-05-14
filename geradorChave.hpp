@@ -2,7 +2,7 @@
 
 /*deslocamento circular*/
 int deslocamento_circular(int n, int tamanho, int shift){
-    return ((n<<shift) | (n>>(tamanho - shift))) & ((1<<tamanho)-1);
+    return ((n<<shift) | ((n>>(tamanho - shift)) & ((1 << shift)-1))) & ((1<<tamanho)-1);
 }
 
 /*geração de chaves subjacentes*/

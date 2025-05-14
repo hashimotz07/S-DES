@@ -12,7 +12,6 @@ int encriptacao(int n, int k){
     auto [l, r] = dividi(n);
     cout << "l : " << toBin(l, 4) << " , r : " << toBin(r, 4) << endl;
     n = feistel(l, r, k1, k2);
-    cout << n << endl;
     return  permutacaoFinal(n);
 }
 

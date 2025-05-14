@@ -25,8 +25,8 @@ string toBin(int n, int sz){
 // converte o numero binario(string) para inteiro
 int toInt(string bits, int sz){
     int num=0;
-    for(int i=sz-1; i >= 0; i--){
-        if(bits[i] == '1') num |= (1 << i);
+    for(int i=sz-1, j=0; i >= 0; i--, j++){
+        if(bits[i] == '1') num |= (1 << j);
     } 
     return num;
 }
