@@ -1,7 +1,6 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include <bitset>
 
 using namespace std;
 
@@ -15,13 +14,19 @@ vector<vector<int>> s0 = {{1, 0, 3, 2}, {3, 2, 1, 0}, {0, 2, 1, 3}, {3, 1, 3, 2}
 vector<vector<int>> s1 = {{0, 1, 2, 3}, {2, 0, 1, 3}, {3, 0, 1, 0}, {2, 1, 0, 3}};
 
 // converte o numero inteiro para binario(string)
-string toBin(int n){
-    bitset<8> bit(n);
-    return bit.to_string();
+string toBin(int n, int sz){
+    string bits = "";
+    for(int i=sz-1; i >= 0; i--){
+        bits += (char)(((n >> i) & 1) + '0');
+    } 
+    return bits;
 }
 
 // converte o numero binario(string) para inteiro
-int toInt(string bits){
-    bitset<8> bit(bits);
-    return bit.to_ulong();
+int toInt(string bits, int sz){
+    int num=0;
+    for(int i=sz-1; i >= 0; i--){
+        if(bits[i] == '1') num |= (1 << i);
+    } 
+    return num;
 }

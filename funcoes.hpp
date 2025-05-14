@@ -1,4 +1,4 @@
-#include "permutacao.hpp"
+#include "geradorChave.hpp"
 
 int permutacaoInicial(int n){
     return permuta(n, ip, 8);
