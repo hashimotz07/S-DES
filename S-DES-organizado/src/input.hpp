@@ -74,12 +74,8 @@ int lerIV(){
 void testarGeracaoDeChave() {
     int chave = lerChave();
     int K1, K2;
-    cout << "\nChave inicial: " << toBin(chave, 10) << endl;
     imprimir = true;
     gerarChaves(chave, K1, K2);
-    cout << endl;
-    cout << "K1: " << toBin(K1, 10) << endl;
-    cout << "K2: " << toBin(K2, 10) << endl;
 }
 
 void testarBloco() {

@@ -5,7 +5,7 @@ int main(){
     int opcao;
     while (true) {
         cout << "\n--------- MENU PRINCIPAL ---------\n";
-        cout << "1 - Testar geração de chave\n";
+        cout << "1 - Testar geração de subchaves\n";
         cout << "2 - Testar bloco individual\n";
         cout << "3 - Testar mensagem completa (ECB/CBC)\n";
         cout << "0 - Sair\n\nEscolha uma opção: ";
