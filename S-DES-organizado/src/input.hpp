@@ -36,7 +36,7 @@ int lerBloco(){
 
 // menu de leitura de mensagem
 vector<string> lerMenssagem(){
-    string mensagemS = "1010111 01101100 10111010 11110000";
+    string mensagemS = "11010111 01101100 10111010 11110000";
     vector<string> mensagemV = separaMensagem(mensagemS);
     cout << "Deseja usar a mensagem padrão (" << mensagemS <<")? (s/n): ";
     char usarPadrao;
@@ -76,18 +76,19 @@ void testarGeracaoDeChave() {
     int K1, K2;
     imprimir = true;
     gerarChaves(chave, K1, K2);
+    cout << "\n\n----------------- Resultado Final das Subchaves -----------------\n\n";
+    cout << "K1:                              " << toBin(K1, 8) << endl;
+    cout << "K2:                              " << toBin(K2, 8) << endl;
+    cout << "\n================================================================\n";
 }
 
 void testarBloco() {
     int chave = lerChave();
     int bloco = lerBloco();
-    int modo, mostrarPasso;
+    int modo;
 
     cout << "\n1 - Encriptar\n2 - Decriptar\nEscolha a operação: ";
     cin >> modo;
-    cout << "\n1 - Passo a passo\n2 - Apenas resposta\nEscolha a forma de saída: ";
-    cin >> mostrarPasso;
-    imprimir = mostrarPasso&1;
 
     int resultado;
     if (modo == 1){
@@ -105,7 +106,7 @@ void testarBloco() {
 }
 
 void testarMensagem() {
-    int modoCifra, operacao, mostrarPasso, IV;
+    int modoCifra, operacao, IV;
 
     int chave = lerChave();
     vector<string> mensagem = lerMenssagem();
@@ -119,9 +120,6 @@ void testarMensagem() {
 
     cout << "\n1 - Encriptar\n2 - Decriptar\nEscolha a operação: ";
     cin >> operacao;
-    cout << "\n1 - Passo a passo\n2 - Apenas resposta\nEscolha a forma de saída: ";
-    cin >> mostrarPasso;
-    imprimir = mostrarPasso&1;
 
     string resultado;
     if (modoCifra == 1) {
@@ -136,5 +134,7 @@ void testarMensagem() {
             resultado = CBC_decripta(mensagem, chave, IV);
     }
 
-    cout << "Resultado final: " << resultado << endl;
+    cout << "\n====================== Resultado Final =========================\n\n";
+    cout << "   => " << resultado << endl;
+    cout << "\n===============================================================\n";
 }
