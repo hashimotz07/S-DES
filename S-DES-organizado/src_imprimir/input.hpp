@@ -1,4 +1,4 @@
-#include "sdes.hpp"
+#include "modes.hpp"
 
 // menu de leitura de chave
 int lerChave(){
@@ -36,7 +36,7 @@ int lerBloco(){
 
 // menu de leitura de mensagem
 vector<string> lerMenssagem(){
-    string mensagemS = "1010111 01101100 10111010 11110000";
+    string mensagemS = "11010111 01101100 10111010 11110000";
     vector<string> mensagemV = separaMensagem(mensagemS);
     cout << "Deseja usar a mensagem padrão (" << mensagemS <<")? (s/n): ";
     char usarPadrao;
@@ -132,5 +132,7 @@ void testarMensagem() {
             resultado = CBC_decripta(mensagem, chave, IV);
     }
 
-    cout << "Resultado final: " << resultado << endl;
+    cout << "\n====================== Resultado Final =========================\n\n";
+    cout << "   => " << resultado << endl;
+    cout << "\n===============================================================\n";
 }
