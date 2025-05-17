@@ -18,25 +18,24 @@ A implementação tem como foco:
 ---
 
 ## 🗂️ Estrutura do Projeto
-
+```
 S-DES-organizado/
-├── README.md
-├── Makefile
-├── src/ # Código limpo, comentado e modular
-│ ├── sdes.cpp
-│ ├── keygen.hpp
-│ ├── permutation.hpp
-│ ├── ffunction.hpp
-│ ├── encrypt.hpp
-│ └── utils.hpp
-├── src_imprimir/ # Código com cout para visualização passo a passo
-│ ├── main.cpp
-│ ├── keygen.hpp
-│ ├── permutation.hpp
-│ ├── ffunction.hpp
-│ ├── encrypt.hpp
-│ └── utils.hpp
-
+├── Makefile # Compila e executa o projeto
+├── README.md # Instruções e informações do projeto
+│
+├── src/ # Código limpo, modular e comentado
+│ ├── sdes.cpp # Execução principal do algoritmo S-DES
+│ ├── keygen.hpp # Geração de subchaves (K1 e K2)
+│ ├── permutation.hpp # Permutações: P10, P8, IP, IP⁻¹, P4
+│ ├── ffunction.hpp # Função F com S-Boxes e XOR
+│ ├── encrypt.hpp # Modos de operação: ECB e CBC
+│ └── utils.hpp # Utilidades e validações de entrada
+│
+├── src_imprimir/ # Versões com cout para apresentação
+│ ├── main.cpp # Menu interativo e passo a passo no terminal
+│ ├── encrypt.hpp # Impressão detalhada de ECB e CBC
+│ └── ... # Versões verbosas dos demais módulos
+```
 
 > A separação entre `src/` e `src_imprimir/` foi feita para manter a clareza e facilitar a leitura do código.
 
@@ -57,9 +56,12 @@ S-DES-organizado/
 ### Usando Makefile:
 ```bash
 make
+```
 
 ### Ou manualmente:
 g++ -std=c++17 -o sdes src_imprimir/main.cpp
+
+---
 
 👨‍💻 Autores
 
