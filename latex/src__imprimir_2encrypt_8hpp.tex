@@ -1,0 +1,90 @@
+\hypertarget{src__imprimir_2encrypt_8hpp}{}\doxysection{Referência do Arquivo src\+\_\+imprimir/encrypt.hpp}
+\label{src__imprimir_2encrypt_8hpp}\index{src\_imprimir/encrypt.hpp@{src\_imprimir/encrypt.hpp}}
+
+
+Versão com logs de debug -\/ Para documentação completa, consulte \mbox{\hyperlink{src_2encrypt_8hpp}{src/encrypt.\+hpp}}.  
+
+
+{\ttfamily \#include \char`\"{}ffunction.\+hpp\char`\"{}}\newline
+Gráfico de dependência de inclusões para encrypt.\+hpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=268pt]{src__imprimir_2encrypt_8hpp__incl}
+\end{center}
+\end{figure}
+Este grafo mostra quais arquivos estão direta ou indiretamente relacionados com esse arquivo\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=219pt]{src__imprimir_2encrypt_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{src__imprimir_2encrypt_8hpp_ad38abf9d210999233910b38698fe6edc}{encriptacao}} (int n, int k)
+\begin{DoxyCompactList}\small\item\em Realiza encriptação ou decriptação com base na flag {\ttfamily encriptar} @debug Mostra\+: \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{src__imprimir_2encrypt_8hpp_a406830071699a6b9a7e9d78dc0f2912a}{decriptacao}} (int n, int k)
+\begin{DoxyCompactList}\small\item\em Wrapper para decriptação usando {\ttfamily encriptacao} com flag apropriada. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Versão com logs de debug -\/ Para documentação completa, consulte \mbox{\hyperlink{src_2encrypt_8hpp}{src/encrypt.\+hpp}}. 
+
+\begin{DoxyNote}{Observação}
+Esta versão contém implementações idênticas às origens, mas com\+:
+\begin{DoxyItemize}
+\item Flags de controle de impressão (imprimir, encriptar)
+\item Logs detalhados do processo interno
+\end{DoxyItemize}
+\end{DoxyNote}
+\begin{DoxySeeAlso}{Veja também}
+\mbox{\hyperlink{src_2encrypt_8hpp}{src/encrypt.\+hpp}} para documentação completa das funções 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Funções}
+\mbox{\Hypertarget{src__imprimir_2encrypt_8hpp_a406830071699a6b9a7e9d78dc0f2912a}\label{src__imprimir_2encrypt_8hpp_a406830071699a6b9a7e9d78dc0f2912a}} 
+\index{encrypt.hpp@{encrypt.hpp}!decriptacao@{decriptacao}}
+\index{decriptacao@{decriptacao}!encrypt.hpp@{encrypt.hpp}}
+\doxysubsubsection{\texorpdfstring{decriptacao()}{decriptacao()}}
+{\footnotesize\ttfamily int decriptacao (\begin{DoxyParamCaption}\item[{int}]{n,  }\item[{int}]{k }\end{DoxyParamCaption})}
+
+
+
+Wrapper para decriptação usando {\ttfamily encriptacao} com flag apropriada. 
+
+Este é o diagrama das funções utilizadas por essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{src__imprimir_2encrypt_8hpp_a406830071699a6b9a7e9d78dc0f2912a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{src__imprimir_2encrypt_8hpp_ad38abf9d210999233910b38698fe6edc}\label{src__imprimir_2encrypt_8hpp_ad38abf9d210999233910b38698fe6edc}} 
+\index{encrypt.hpp@{encrypt.hpp}!encriptacao@{encriptacao}}
+\index{encriptacao@{encriptacao}!encrypt.hpp@{encrypt.hpp}}
+\doxysubsubsection{\texorpdfstring{encriptacao()}{encriptacao()}}
+{\footnotesize\ttfamily int encriptacao (\begin{DoxyParamCaption}\item[{int}]{n,  }\item[{int}]{k }\end{DoxyParamCaption})}
+
+
+
+Realiza encriptação ou decriptação com base na flag {\ttfamily encriptar} @debug Mostra\+: 
+
+
+\begin{DoxyItemize}
+\item Permutações iniciais/finais
+\item Subchaves geradas
+\item Resultado das rodadas Feistel 
+\end{DoxyItemize}Este é o diagrama das funções utilizadas por essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{src__imprimir_2encrypt_8hpp_ad38abf9d210999233910b38698fe6edc_cgraph}
+\end{center}
+\end{figure}

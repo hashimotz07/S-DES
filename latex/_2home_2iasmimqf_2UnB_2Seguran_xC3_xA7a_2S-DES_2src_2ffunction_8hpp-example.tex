@@ -1,0 +1,22 @@
+\hypertarget{_2home_2iasmimqf_2UnB_2Seguran_xC3_xA7a_2S-DES_2src_2ffunction_8hpp-example}{}\doxysection{/home/iasmimqf/\+Un\+B/\+Segurança/\+S-\/\+DES/src/ffunction.\+hpp}
+Divide um bloco de 8 bits em dois blocos de 4 bits (esquerda/direita).
+\begin{DoxyParams}{Parâmetros}
+{\em n} & Bloco de 8 bits. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+pair$<$int, int$>$ Par (L, R), onde L = 4 bits MSB, R = 4 bits LSB. 
+\end{DoxyReturn}
+\begin{DoxyPrecond}{Pré-\/condição}
+n deve ser um valor de 8 bits. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Pós-\/condição}
+L e R serão valores de 4 bits cada (0 $<$= L, R $<$= 15).
+\end{DoxyPostcond}
+dividi(0b11001010) // Retorna (0b1100, 0b1010)
+
+
+\begin{DoxyCodeInclude}{0}
+
+\end{DoxyCodeInclude}
+ça/\+S-\/\+DES/src/ffunction.hpp 

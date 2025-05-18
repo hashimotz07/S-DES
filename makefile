@@ -15,3 +15,9 @@ $(TARGET): $(OBJS)
 
 clean:
 	rm -f $(TARGET) $(SRC_DIR)/*.o
+
+doxygen:
+	doxygen -g
+
+html: doxygen 
+	xdg-open ./docs/html/index.html

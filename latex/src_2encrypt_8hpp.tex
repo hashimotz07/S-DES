@@ -1,0 +1,147 @@
+\hypertarget{src_2encrypt_8hpp}{}\doxysection{Referência do Arquivo src/encrypt.hpp}
+\label{src_2encrypt_8hpp}\index{src/encrypt.hpp@{src/encrypt.hpp}}
+
+
+Implementação das funções de encriptação e decriptação do algoritmo S-\/\+DES.  
+
+
+{\ttfamily \#include \char`\"{}ffunction.\+hpp\char`\"{}}\newline
+Gráfico de dependência de inclusões para encrypt.\+hpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=268pt]{src_2encrypt_8hpp__incl}
+\end{center}
+\end{figure}
+Este grafo mostra quais arquivos estão direta ou indiretamente relacionados com esse arquivo\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=172pt]{src_2encrypt_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{src_2encrypt_8hpp_ad38abf9d210999233910b38698fe6edc}{encriptacao}} (int n, int k)
+\begin{DoxyCompactList}\small\item\em Realiza a encriptação de um bloco de 8 bits usando S-\/\+DES. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{src_2encrypt_8hpp_a406830071699a6b9a7e9d78dc0f2912a}{decriptacao}} (int n, int k)
+\begin{DoxyCompactList}\small\item\em Função conveniente para decriptação. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Implementação das funções de encriptação e decriptação do algoritmo S-\/\+DES. 
+
+\begin{DoxyAuthor}{Autor}
+Iasmim Freitas 
+
+Lucas Hashimoto 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Data}
+2025-\/05
+\end{DoxyDate}
+\begin{DoxyNote}{Observação}
+Utiliza a variável global \textquotesingle{}encriptar\textquotesingle{} de utils.\+hpp 
+
+Controle global de operação\+:
+\begin{DoxyItemize}
+\item encriptar = 2\+: Modo encriptação (usa K1 depois K2)
+\item encriptar = 1\+: Modo decriptação (inverte para K2 depois K1)
+\end{DoxyItemize}
+\end{DoxyNote}
+\begin{DoxyWarning}{Aviso}
+A variável \textquotesingle{}encriptar\textquotesingle{} deve ser modificada apenas pelas funções deste módulo 
+\end{DoxyWarning}
+
+
+\doxysubsection{Funções}
+\mbox{\Hypertarget{src_2encrypt_8hpp_a406830071699a6b9a7e9d78dc0f2912a}\label{src_2encrypt_8hpp_a406830071699a6b9a7e9d78dc0f2912a}} 
+\index{encrypt.hpp@{encrypt.hpp}!decriptacao@{decriptacao}}
+\index{decriptacao@{decriptacao}!encrypt.hpp@{encrypt.hpp}}
+\doxysubsubsection{\texorpdfstring{decriptacao()}{decriptacao()}}
+{\footnotesize\ttfamily int decriptacao (\begin{DoxyParamCaption}\item[{int}]{n,  }\item[{int}]{k }\end{DoxyParamCaption})}
+
+
+
+Função conveniente para decriptação. 
+
+Configura automaticamente encriptar = 1 para decriptação, executa a operação e restaura o valor original (2)
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em n} & Bloco de 8 bits a ser decriptado (0-\/255) \\
+\hline
+{\em k} & Chave mestra de 10 bits (0-\/1023) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+int Bloco decriptado de 8 bits
+\end{DoxyReturn}
+\begin{DoxyNote}{Observação}
+A decriptação é implementada como uma encriptação com\+:
+\begin{DoxyEnumerate}
+\item Ordem inversa das subchaves (K2, K1)
+\item Mesma rede de Feistel 
+\end{DoxyEnumerate}
+\end{DoxyNote}
+Este é o diagrama das funções utilizadas por essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{src_2encrypt_8hpp_a406830071699a6b9a7e9d78dc0f2912a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{src_2encrypt_8hpp_ad38abf9d210999233910b38698fe6edc}\label{src_2encrypt_8hpp_ad38abf9d210999233910b38698fe6edc}} 
+\index{encrypt.hpp@{encrypt.hpp}!encriptacao@{encriptacao}}
+\index{encriptacao@{encriptacao}!encrypt.hpp@{encrypt.hpp}}
+\doxysubsubsection{\texorpdfstring{encriptacao()}{encriptacao()}}
+{\footnotesize\ttfamily int encriptacao (\begin{DoxyParamCaption}\item[{int}]{n,  }\item[{int}]{k }\end{DoxyParamCaption})}
+
+
+
+Realiza a encriptação de um bloco de 8 bits usando S-\/\+DES. 
+
+O comportamento depende do valor global \textquotesingle{}encriptar\textquotesingle{}\+:
+\begin{DoxyItemize}
+\item Se encriptar == 2\+: Encripta com K1 → K2 (padrão)
+\item Se encriptar == 1\+: Decripta com K2 → K1
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em n} & Bloco de 8 bits a ser encriptado (0-\/255) \\
+\hline
+{\em k} & Chave mestra de 10 bits (0-\/1023) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+int Bloco encriptado de 8 bits
+\end{DoxyReturn}
+\begin{DoxyPrecond}{Pré-\/condição}
+n deve ser um valor de 8 bits (0 $<$= n $<$= 255) 
+
+k deve ser um valor de 10 bits (0 $<$= k $<$= 1023) 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Pós-\/condição}
+O resultado será um bloco de 8 bits encriptado
+\end{DoxyPostcond}
+\begin{DoxyNote}{Observação}
+O processo segue estas etapas\+:
+\begin{DoxyEnumerate}
+\item Geração das subchaves K1 e K2 -\/$>$ Inverte a ordem se encriptar == 1
+\item Permutação inicial (IP)
+\item Aplicação da rede de Feistel (2 rodadas)
+\item Permutação final (IP⁻¹) 
+\end{DoxyEnumerate}
+\end{DoxyNote}
+Este é o diagrama das funções utilizadas por essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{src_2encrypt_8hpp_ad38abf9d210999233910b38698fe6edc_cgraph}
+\end{center}
+\end{figure}

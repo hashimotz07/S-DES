@@ -1,0 +1,30 @@
+\hypertarget{_2home_2iasmimqf_2UnB_2Seguran_xC3_xA7a_2S-DES_2src_2keygen_8hpp-example}{}\doxysection{/home/iasmimqf/\+Un\+B/\+Segurança/\+S-\/\+DES/src/keygen.\+hpp}
+Realiza um deslocamento circular (bit rotation) em um número binário. Rotaciona os bits do número para a esquerda, com wraparound.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em n} & Número de entrada a ser rotacionado. \\
+\hline
+{\em tamanho} & Número total de bits em \textquotesingle{}n\textquotesingle{}. \\
+\hline
+{\em shift} & Número de posições para rotacionar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+int Valor rotacionado com \textquotesingle{}tamanho\textquotesingle{} bits.
+\end{DoxyReturn}
+\begin{DoxyPrecond}{Pré-\/condição}
+tamanho $>$ 0 \&\& tamanho $<$= 32 bits (sizeof(int)$\ast$8) 
+
+shift $>$ 0 \&\& shift $<$ tamanho 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Pós-\/condição}
+O resultado terá exatamente \textquotesingle{}tamanho\textquotesingle{} bits (bits extras são truncados).
+\end{DoxyPostcond}
+deslocamento\+\_\+circular(0b10110, 5, 1) // Retorna 0b01101 (rotaciona 1 posição) deslocamento\+\_\+circular(0b10110, 5, 2) // Retorna 0b11010 (rotaciona 2 posições)
+
+
+\begin{DoxyCodeInclude}{0}
+
+\end{DoxyCodeInclude}
+ça/\+S-\/\+DES/src/keygen.hpp 

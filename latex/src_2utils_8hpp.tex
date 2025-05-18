@@ -1,0 +1,100 @@
+\hypertarget{src_2utils_8hpp}{}\doxysection{Referência do Arquivo src/utils.hpp}
+\label{src_2utils_8hpp}\index{src/utils.hpp@{src/utils.hpp}}
+
+
+Utilitários para manipulação de bits, conversões e processamento de mensagens para o algoritmo S-\/\+DES.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+Gráfico de dependência de inclusões para utils.\+hpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=268pt]{src_2utils_8hpp__incl}
+\end{center}
+\end{figure}
+Este grafo mostra quais arquivos estão direta ou indiretamente relacionados com esse arquivo\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=195pt]{src_2utils_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{src_2utils_8hpp_a29bdece031c7545c0e1228cb3c236b45}{to\+Bin}} (int n, int sz)
+\item 
+int \mbox{\hyperlink{src_2utils_8hpp_ae6a7d3a9943391ca6b86a7edfb5ea650}{to\+Int}} (string bits, int sz)
+\item 
+vector$<$ string $>$ \mbox{\hyperlink{src_2utils_8hpp_a7e521b386959ddade896873fafeeb7a1}{separa\+Mensagem}} (string \&mensagem)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variáveis}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{src_2utils_8hpp_a4c81ce717a1cb4424918e04a38ca83ec}{imprimir}} =false
+\begin{DoxyCompactList}\small\item\em Flag para controle de impressão passo a passo (true = ativa saída detalhada) \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{src_2utils_8hpp_a721eda3d9c9eb4176640c16ef7da6222}{encriptar}} =2
+\begin{DoxyCompactList}\small\item\em Modo de operação (2 = encriptar, 1 = decriptar) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Utilitários para manipulação de bits, conversões e processamento de mensagens para o algoritmo S-\/\+DES. 
+
+\begin{DoxyAuthor}{Autor}
+Iasmim Freitas 
+
+Lucas Hashimoto 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Data}
+2025-\/05 
+\end{DoxyDate}
+
+
+\doxysubsection{Funções}
+\mbox{\Hypertarget{src_2utils_8hpp_a7e521b386959ddade896873fafeeb7a1}\label{src_2utils_8hpp_a7e521b386959ddade896873fafeeb7a1}} 
+\index{utils.hpp@{utils.hpp}!separaMensagem@{separaMensagem}}
+\index{separaMensagem@{separaMensagem}!utils.hpp@{utils.hpp}}
+\doxysubsubsection{\texorpdfstring{separaMensagem()}{separaMensagem()}}
+{\footnotesize\ttfamily vector$<$string$>$ separa\+Mensagem (\begin{DoxyParamCaption}\item[{string \&}]{mensagem }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{src_2utils_8hpp_a29bdece031c7545c0e1228cb3c236b45}\label{src_2utils_8hpp_a29bdece031c7545c0e1228cb3c236b45}} 
+\index{utils.hpp@{utils.hpp}!toBin@{toBin}}
+\index{toBin@{toBin}!utils.hpp@{utils.hpp}}
+\doxysubsubsection{\texorpdfstring{toBin()}{toBin()}}
+{\footnotesize\ttfamily string to\+Bin (\begin{DoxyParamCaption}\item[{int}]{n,  }\item[{int}]{sz }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{src_2utils_8hpp_ae6a7d3a9943391ca6b86a7edfb5ea650}\label{src_2utils_8hpp_ae6a7d3a9943391ca6b86a7edfb5ea650}} 
+\index{utils.hpp@{utils.hpp}!toInt@{toInt}}
+\index{toInt@{toInt}!utils.hpp@{utils.hpp}}
+\doxysubsubsection{\texorpdfstring{toInt()}{toInt()}}
+{\footnotesize\ttfamily int to\+Int (\begin{DoxyParamCaption}\item[{string}]{bits,  }\item[{int}]{sz }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variáveis}
+\mbox{\Hypertarget{src_2utils_8hpp_a721eda3d9c9eb4176640c16ef7da6222}\label{src_2utils_8hpp_a721eda3d9c9eb4176640c16ef7da6222}} 
+\index{utils.hpp@{utils.hpp}!encriptar@{encriptar}}
+\index{encriptar@{encriptar}!utils.hpp@{utils.hpp}}
+\doxysubsubsection{\texorpdfstring{encriptar}{encriptar}}
+{\footnotesize\ttfamily encriptar =2}
+
+
+
+Modo de operação (2 = encriptar, 1 = decriptar) 
+
+Controla modo de operação (1=decriptação, 2=encriptação) \mbox{\Hypertarget{src_2utils_8hpp_a4c81ce717a1cb4424918e04a38ca83ec}\label{src_2utils_8hpp_a4c81ce717a1cb4424918e04a38ca83ec}} 
+\index{utils.hpp@{utils.hpp}!imprimir@{imprimir}}
+\index{imprimir@{imprimir}!utils.hpp@{utils.hpp}}
+\doxysubsubsection{\texorpdfstring{imprimir}{imprimir}}
+{\footnotesize\ttfamily imprimir =false}
+
+
+
+Flag para controle de impressão passo a passo (true = ativa saída detalhada) 
+
+Ativa/desativa logs detalhados (false=off, true=on) 

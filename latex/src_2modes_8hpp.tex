@@ -1,0 +1,208 @@
+\hypertarget{src_2modes_8hpp}{}\doxysection{Referência do Arquivo src/modes.hpp}
+\label{src_2modes_8hpp}\index{src/modes.hpp@{src/modes.hpp}}
+
+
+Implementação dos modos de operação ECB e CBC para o S-\/\+DES.  
+
+
+{\ttfamily \#include \char`\"{}encrypt.\+hpp\char`\"{}}\newline
+Gráfico de dependência de inclusões para modes.\+hpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=268pt]{src_2modes_8hpp__incl}
+\end{center}
+\end{figure}
+Este grafo mostra quais arquivos estão direta ou indiretamente relacionados com esse arquivo\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=168pt]{src_2modes_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{src_2modes_8hpp_a60434abc68ab236036eb3798130ea264}{ECB\+\_\+encripta}} (vector$<$ string $>$ \&plain\+Text, int chave)
+\begin{DoxyCompactList}\small\item\em Encripta plaintext usando o modo ECB (Electronic Codebook) \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{src_2modes_8hpp_ac0fb70c775e9b01e69c36a0171ac49ab}{ECB\+\_\+decripta}} (vector$<$ string $>$ \&cipher\+Text, int chave)
+\begin{DoxyCompactList}\small\item\em Decripta texto cifrado usando modo ECB. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{src_2modes_8hpp_ad25fa5746a25d385f4832f202ded5a1f}{CBC\+\_\+encripta}} (vector$<$ string $>$ \&plain\+Text, int chave, int IV)
+\begin{DoxyCompactList}\small\item\em Encripta texto plano usando modo CBC (Cipher Block Chaining) \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{src_2modes_8hpp_a563c30935c912770fcfa72b9184ef76e}{CBC\+\_\+decripta}} (vector$<$ string $>$ cipher\+Text, int chave, int IV)
+\begin{DoxyCompactList}\small\item\em Decripta texto cifrado usando modo CBC. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Implementação dos modos de operação ECB e CBC para o S-\/\+DES. 
+
+\begin{DoxyAuthor}{Autor}
+Iasmim Freitas 
+
+Lucas Hashimoto 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Data}
+2025-\/05 
+\end{DoxyDate}
+
+
+\doxysubsection{Funções}
+\mbox{\Hypertarget{src_2modes_8hpp_a563c30935c912770fcfa72b9184ef76e}\label{src_2modes_8hpp_a563c30935c912770fcfa72b9184ef76e}} 
+\index{modes.hpp@{modes.hpp}!CBC\_decripta@{CBC\_decripta}}
+\index{CBC\_decripta@{CBC\_decripta}!modes.hpp@{modes.hpp}}
+\doxysubsubsection{\texorpdfstring{CBC\_decripta()}{CBC\_decripta()}}
+{\footnotesize\ttfamily string CBC\+\_\+decripta (\begin{DoxyParamCaption}\item[{vector$<$ string $>$}]{cipher\+Text,  }\item[{int}]{chave,  }\item[{int}]{IV }\end{DoxyParamCaption})}
+
+
+
+Decripta texto cifrado usando modo CBC. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em cipher\+Text} & Vetor de strings binárias (blocos cifrados de 8 bits) \\
+\hline
+{\em chave} & Chave mestra de 10 bits usada na encriptação \\
+\hline
+{\em IV} & Mesmo vetor de inicialização usado na encriptação \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+string Texto plano reconstruído
+\end{DoxyReturn}
+\begin{DoxyWarning}{Aviso}
+O IV deve ser o mesmo usado na encriptação 
+\end{DoxyWarning}
+\begin{DoxyNote}{Observação}
+Processo\+:
+\begin{DoxyEnumerate}
+\item Adiciona IV no início do fluxo
+\item Processa blocos em ordem reversa
+\item Aplica XOR com bloco anterior cifrado 
+\end{DoxyEnumerate}
+\end{DoxyNote}
+Este é o diagrama das funções utilizadas por essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{src_2modes_8hpp_a563c30935c912770fcfa72b9184ef76e_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{src_2modes_8hpp_ad25fa5746a25d385f4832f202ded5a1f}\label{src_2modes_8hpp_ad25fa5746a25d385f4832f202ded5a1f}} 
+\index{modes.hpp@{modes.hpp}!CBC\_encripta@{CBC\_encripta}}
+\index{CBC\_encripta@{CBC\_encripta}!modes.hpp@{modes.hpp}}
+\doxysubsubsection{\texorpdfstring{CBC\_encripta()}{CBC\_encripta()}}
+{\footnotesize\ttfamily string CBC\+\_\+encripta (\begin{DoxyParamCaption}\item[{vector$<$ string $>$ \&}]{plain\+Text,  }\item[{int}]{chave,  }\item[{int}]{IV }\end{DoxyParamCaption})}
+
+
+
+Encripta texto plano usando modo CBC (Cipher Block Chaining) 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em plain\+Text} & Vetor de strings binárias (blocos de 8 bits) \\
+\hline
+{\em chave} & Chave mestra de 10 bits (0-\/1023) \\
+\hline
+{\em IV} & Vetor de inicialização (8 bits) para o primeiro bloco \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+string Texto cifrado concatenado
+\end{DoxyReturn}
+\begin{DoxyPrecond}{Pré-\/condição}
+IV deve ser valor de 8 bits (0-\/255) 
+\end{DoxyPrecond}
+\begin{DoxyNote}{Observação}
+Características do CBC\+:
+\begin{DoxyItemize}
+\item Blocos idênticos produzem saídas diferentes
+\item Propagação de erros entre blocos
+\item Requer IV único por encriptação 
+\end{DoxyItemize}
+\end{DoxyNote}
+Este é o diagrama das funções utilizadas por essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{src_2modes_8hpp_ad25fa5746a25d385f4832f202ded5a1f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{src_2modes_8hpp_ac0fb70c775e9b01e69c36a0171ac49ab}\label{src_2modes_8hpp_ac0fb70c775e9b01e69c36a0171ac49ab}} 
+\index{modes.hpp@{modes.hpp}!ECB\_decripta@{ECB\_decripta}}
+\index{ECB\_decripta@{ECB\_decripta}!modes.hpp@{modes.hpp}}
+\doxysubsubsection{\texorpdfstring{ECB\_decripta()}{ECB\_decripta()}}
+{\footnotesize\ttfamily string ECB\+\_\+decripta (\begin{DoxyParamCaption}\item[{vector$<$ string $>$ \&}]{cipher\+Text,  }\item[{int}]{chave }\end{DoxyParamCaption})}
+
+
+
+Decripta texto cifrado usando modo ECB. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em cipher\+Text} & Vetor de strings binárias (blocos cifrados de 8 bits) \\
+\hline
+{\em chave} & Chave mestra de 10 bits usada na encriptação \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+string Texto plano reconstruído
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{Veja também}
+\mbox{\hyperlink{src_2modes_8hpp_a60434abc68ab236036eb3798130ea264}{ECB\+\_\+encripta()}} para pré-\/condições 
+\end{DoxySeeAlso}
+Este é o diagrama das funções utilizadas por essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{src_2modes_8hpp_ac0fb70c775e9b01e69c36a0171ac49ab_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{src_2modes_8hpp_a60434abc68ab236036eb3798130ea264}\label{src_2modes_8hpp_a60434abc68ab236036eb3798130ea264}} 
+\index{modes.hpp@{modes.hpp}!ECB\_encripta@{ECB\_encripta}}
+\index{ECB\_encripta@{ECB\_encripta}!modes.hpp@{modes.hpp}}
+\doxysubsubsection{\texorpdfstring{ECB\_encripta()}{ECB\_encripta()}}
+{\footnotesize\ttfamily string ECB\+\_\+encripta (\begin{DoxyParamCaption}\item[{vector$<$ string $>$ \&}]{plain\+Text,  }\item[{int}]{chave }\end{DoxyParamCaption})}
+
+
+
+Encripta plaintext usando o modo ECB (Electronic Codebook) 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em plain\+Text} & Vetor de strings binárias (blocos de 8 bits) \\
+\hline
+{\em chave} & Chave mestra de 10 bits (0-\/1023) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+string Texto cifrado concatenado
+\end{DoxyReturn}
+\begin{DoxyPrecond}{Pré-\/condição}
+Cada string em plain\+Text deve ter tamanho 8 e conter apenas \textquotesingle{}0\textquotesingle{}s e \textquotesingle{}1\textquotesingle{}s 
+
+chave deve ser um valor de 10 bits válido 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Pós-\/condição}
+O resultado terá tamanho plain\+Text.\+size() $\ast$ 8
+\end{DoxyPostcond}
+\begin{DoxyNote}{Observação}
+Características do ECB\+:
+\begin{DoxyItemize}
+\item Blocos idênticos produzem saídas idênticas
+\item Não usa vetor de inicialização (IV)
+\item Paralelizável 
+\end{DoxyItemize}
+\end{DoxyNote}
+Este é o diagrama das funções utilizadas por essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{src_2modes_8hpp_a60434abc68ab236036eb3798130ea264_cgraph}
+\end{center}
+\end{figure}

@@ -1,0 +1,137 @@
+\hypertarget{src__imprimir_2modes_8hpp}{}\doxysection{Referência do Arquivo src\+\_\+imprimir/modes.hpp}
+\label{src__imprimir_2modes_8hpp}\index{src\_imprimir/modes.hpp@{src\_imprimir/modes.hpp}}
+
+
+Implementações dos modos ECB e CBC com suporte a debug.  
+
+
+{\ttfamily \#include \char`\"{}encrypt.\+hpp\char`\"{}}\newline
+Gráfico de dependência de inclusões para modes.\+hpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=268pt]{src__imprimir_2modes_8hpp__incl}
+\end{center}
+\end{figure}
+Este grafo mostra quais arquivos estão direta ou indiretamente relacionados com esse arquivo\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=215pt]{src__imprimir_2modes_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{src__imprimir_2modes_8hpp_a66a0826261dce6f6cdbec986a848b6e3}{imprimir\+Cabecalho}} (string tipo, string modo, string chave, string IV=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em Imprime cabeçalho formatado para os modos ECB/\+CBC @debug Exibe estrutura visual da operação por bloco, de acordo com o modo e tipo. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{src__imprimir_2modes_8hpp_a60434abc68ab236036eb3798130ea264}{ECB\+\_\+encripta}} (vector$<$ string $>$ \&plain\+Text, int chave)
+\begin{DoxyCompactList}\small\item\em Encriptação no modo ECB @debug Mostra entrada/saída de cada bloco. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{src__imprimir_2modes_8hpp_ac0fb70c775e9b01e69c36a0171ac49ab}{ECB\+\_\+decripta}} (vector$<$ string $>$ \&cipher\+Text, int chave)
+\begin{DoxyCompactList}\small\item\em Decriptação no modo ECB @debug Mostra entrada/saída de cada bloco. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{src__imprimir_2modes_8hpp_ad25fa5746a25d385f4832f202ded5a1f}{CBC\+\_\+encripta}} (vector$<$ string $>$ \&plain\+Text, int chave, int IV)
+\begin{DoxyCompactList}\small\item\em Encriptação no modo CBC @debug Mostra XOR com IV/anterior e resultado cifrado. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{src__imprimir_2modes_8hpp_a563c30935c912770fcfa72b9184ef76e}{CBC\+\_\+decripta}} (vector$<$ string $>$ cipher\+Text, int chave, int IV)
+\begin{DoxyCompactList}\small\item\em Decriptação no modo CBC @debug Mostra resultado do S-\/\+DES e XOR com IV/anterior. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Implementações dos modos ECB e CBC com suporte a debug. 
+
+\begin{DoxyNote}{Observação}
+Esta versão contém\+:
+\begin{DoxyItemize}
+\item Cabeçalhos de operação formatados
+\item Logs detalhados para cada bloco, quando {\ttfamily imprimir} está ativado
+\end{DoxyItemize}
+\end{DoxyNote}
+\begin{DoxySeeAlso}{Veja também}
+\mbox{\hyperlink{src_2modes_8hpp}{src/modes.\+hpp}} para documentação completa das funções 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Funções}
+\mbox{\Hypertarget{src__imprimir_2modes_8hpp_a563c30935c912770fcfa72b9184ef76e}\label{src__imprimir_2modes_8hpp_a563c30935c912770fcfa72b9184ef76e}} 
+\index{modes.hpp@{modes.hpp}!CBC\_decripta@{CBC\_decripta}}
+\index{CBC\_decripta@{CBC\_decripta}!modes.hpp@{modes.hpp}}
+\doxysubsubsection{\texorpdfstring{CBC\_decripta()}{CBC\_decripta()}}
+{\footnotesize\ttfamily string CBC\+\_\+decripta (\begin{DoxyParamCaption}\item[{vector$<$ string $>$}]{cipher\+Text,  }\item[{int}]{chave,  }\item[{int}]{IV }\end{DoxyParamCaption})}
+
+
+
+Decriptação no modo CBC @debug Mostra resultado do S-\/\+DES e XOR com IV/anterior. 
+
+Este é o diagrama das funções utilizadas por essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{src__imprimir_2modes_8hpp_a563c30935c912770fcfa72b9184ef76e_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{src__imprimir_2modes_8hpp_ad25fa5746a25d385f4832f202ded5a1f}\label{src__imprimir_2modes_8hpp_ad25fa5746a25d385f4832f202ded5a1f}} 
+\index{modes.hpp@{modes.hpp}!CBC\_encripta@{CBC\_encripta}}
+\index{CBC\_encripta@{CBC\_encripta}!modes.hpp@{modes.hpp}}
+\doxysubsubsection{\texorpdfstring{CBC\_encripta()}{CBC\_encripta()}}
+{\footnotesize\ttfamily string CBC\+\_\+encripta (\begin{DoxyParamCaption}\item[{vector$<$ string $>$ \&}]{plain\+Text,  }\item[{int}]{chave,  }\item[{int}]{IV }\end{DoxyParamCaption})}
+
+
+
+Encriptação no modo CBC @debug Mostra XOR com IV/anterior e resultado cifrado. 
+
+Este é o diagrama das funções utilizadas por essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{src__imprimir_2modes_8hpp_ad25fa5746a25d385f4832f202ded5a1f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{src__imprimir_2modes_8hpp_ac0fb70c775e9b01e69c36a0171ac49ab}\label{src__imprimir_2modes_8hpp_ac0fb70c775e9b01e69c36a0171ac49ab}} 
+\index{modes.hpp@{modes.hpp}!ECB\_decripta@{ECB\_decripta}}
+\index{ECB\_decripta@{ECB\_decripta}!modes.hpp@{modes.hpp}}
+\doxysubsubsection{\texorpdfstring{ECB\_decripta()}{ECB\_decripta()}}
+{\footnotesize\ttfamily string ECB\+\_\+decripta (\begin{DoxyParamCaption}\item[{vector$<$ string $>$ \&}]{cipher\+Text,  }\item[{int}]{chave }\end{DoxyParamCaption})}
+
+
+
+Decriptação no modo ECB @debug Mostra entrada/saída de cada bloco. 
+
+Este é o diagrama das funções utilizadas por essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{src__imprimir_2modes_8hpp_ac0fb70c775e9b01e69c36a0171ac49ab_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{src__imprimir_2modes_8hpp_a60434abc68ab236036eb3798130ea264}\label{src__imprimir_2modes_8hpp_a60434abc68ab236036eb3798130ea264}} 
+\index{modes.hpp@{modes.hpp}!ECB\_encripta@{ECB\_encripta}}
+\index{ECB\_encripta@{ECB\_encripta}!modes.hpp@{modes.hpp}}
+\doxysubsubsection{\texorpdfstring{ECB\_encripta()}{ECB\_encripta()}}
+{\footnotesize\ttfamily string ECB\+\_\+encripta (\begin{DoxyParamCaption}\item[{vector$<$ string $>$ \&}]{plain\+Text,  }\item[{int}]{chave }\end{DoxyParamCaption})}
+
+
+
+Encriptação no modo ECB @debug Mostra entrada/saída de cada bloco. 
+
+Este é o diagrama das funções utilizadas por essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{src__imprimir_2modes_8hpp_a60434abc68ab236036eb3798130ea264_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{src__imprimir_2modes_8hpp_a66a0826261dce6f6cdbec986a848b6e3}\label{src__imprimir_2modes_8hpp_a66a0826261dce6f6cdbec986a848b6e3}} 
+\index{modes.hpp@{modes.hpp}!imprimirCabecalho@{imprimirCabecalho}}
+\index{imprimirCabecalho@{imprimirCabecalho}!modes.hpp@{modes.hpp}}
+\doxysubsubsection{\texorpdfstring{imprimirCabecalho()}{imprimirCabecalho()}}
+{\footnotesize\ttfamily void imprimir\+Cabecalho (\begin{DoxyParamCaption}\item[{string}]{tipo,  }\item[{string}]{modo,  }\item[{string}]{chave,  }\item[{string}]{IV = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+Imprime cabeçalho formatado para os modos ECB/\+CBC @debug Exibe estrutura visual da operação por bloco, de acordo com o modo e tipo. 
+

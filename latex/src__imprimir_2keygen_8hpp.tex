@@ -1,0 +1,79 @@
+\hypertarget{src__imprimir_2keygen_8hpp}{}\doxysection{Referência do Arquivo src\+\_\+imprimir/keygen.hpp}
+\label{src__imprimir_2keygen_8hpp}\index{src\_imprimir/keygen.hpp@{src\_imprimir/keygen.hpp}}
+
+
+Versão debug da geração de chaves -\/ Documentação completa em \mbox{\hyperlink{src_2keygen_8hpp}{src/keygen.\+hpp}}.  
+
+
+{\ttfamily \#include \char`\"{}permutation.\+hpp\char`\"{}}\newline
+Gráfico de dependência de inclusões para keygen.\+hpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=268pt]{src__imprimir_2keygen_8hpp__incl}
+\end{center}
+\end{figure}
+Este grafo mostra quais arquivos estão direta ou indiretamente relacionados com esse arquivo\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=225pt]{src__imprimir_2keygen_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{src__imprimir_2keygen_8hpp_a227d6ed50aaac9b21bf83806aa3ffab0}{deslocamento\+\_\+circular}} (int n, int tamanho, int shift)
+\begin{DoxyCompactList}\small\item\em Deslocamento circular. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{src__imprimir_2keygen_8hpp_a493f9b8159e3d597bac6b91145b2afdc}{gerar\+Chaves}} (int chave, int \&k1, int \&k2)
+\begin{DoxyCompactList}\small\item\em Geração de subchaves com logs detalhados @debug Mostra todas as etapas do processo quando imprimir=true\+: \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Versão debug da geração de chaves -\/ Documentação completa em \mbox{\hyperlink{src_2keygen_8hpp}{src/keygen.\+hpp}}. 
+
+\begin{DoxyNote}{Observação}
+Contém logs detalhados de cada etapa do processo 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{Veja também}
+\mbox{\hyperlink{src_2keygen_8hpp}{src/keygen.\+hpp}} para documentação completa das funções 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Funções}
+\mbox{\Hypertarget{src__imprimir_2keygen_8hpp_a227d6ed50aaac9b21bf83806aa3ffab0}\label{src__imprimir_2keygen_8hpp_a227d6ed50aaac9b21bf83806aa3ffab0}} 
+\index{keygen.hpp@{keygen.hpp}!deslocamento\_circular@{deslocamento\_circular}}
+\index{deslocamento\_circular@{deslocamento\_circular}!keygen.hpp@{keygen.hpp}}
+\doxysubsubsection{\texorpdfstring{deslocamento\_circular()}{deslocamento\_circular()}}
+{\footnotesize\ttfamily int deslocamento\+\_\+circular (\begin{DoxyParamCaption}\item[{int}]{n,  }\item[{int}]{tamanho,  }\item[{int}]{shift }\end{DoxyParamCaption})}
+
+
+
+Deslocamento circular. 
+
+\mbox{\Hypertarget{src__imprimir_2keygen_8hpp_a493f9b8159e3d597bac6b91145b2afdc}\label{src__imprimir_2keygen_8hpp_a493f9b8159e3d597bac6b91145b2afdc}} 
+\index{keygen.hpp@{keygen.hpp}!gerarChaves@{gerarChaves}}
+\index{gerarChaves@{gerarChaves}!keygen.hpp@{keygen.hpp}}
+\doxysubsubsection{\texorpdfstring{gerarChaves()}{gerarChaves()}}
+{\footnotesize\ttfamily void gerar\+Chaves (\begin{DoxyParamCaption}\item[{int}]{chave,  }\item[{int \&}]{k1,  }\item[{int \&}]{k2 }\end{DoxyParamCaption})}
+
+
+
+Geração de subchaves com logs detalhados @debug Mostra todas as etapas do processo quando imprimir=true\+: 
+
+
+\begin{DoxyItemize}
+\item Permutação P10
+\item Deslocamentos circulares
+\item Permutações P8
+\item Resultados intermediários 
+\end{DoxyItemize}Este é o diagrama das funções utilizadas por essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=321pt]{src__imprimir_2keygen_8hpp_a493f9b8159e3d597bac6b91145b2afdc_cgraph}
+\end{center}
+\end{figure}

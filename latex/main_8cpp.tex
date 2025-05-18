@@ -1,0 +1,58 @@
+\hypertarget{main_8cpp}{}\doxysection{Referência do Arquivo src\+\_\+imprimir/main.cpp}
+\label{main_8cpp}\index{src\_imprimir/main.cpp@{src\_imprimir/main.cpp}}
+
+
+Interface interativa principal para testes com o algoritmo S-\/\+DES.  
+
+
+{\ttfamily \#include \char`\"{}input.\+hpp\char`\"{}}\newline
+Gráfico de dependência de inclusões para main.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=268pt]{main_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em Função principal com menu interativo para testes com S-\/\+DES. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Interface interativa principal para testes com o algoritmo S-\/\+DES. 
+
+\begin{DoxyNote}{Observação}
+Esta versão fornece um menu para acessar testes com chave, bloco e mensagem
+\end{DoxyNote}
+\begin{DoxySeeAlso}{Veja também}
+\mbox{\hyperlink{sdes_8cpp}{src/sdes.\+cpp}} para versão completa e estruturada para uso em produção @debug Ativa logs dependendo das escolhas de saída feitas pelo usuário 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Funções}
+\mbox{\Hypertarget{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Função principal com menu interativo para testes com S-\/\+DES. 
+
+Opções disponíveis\+:
+\begin{DoxyItemize}
+\item Gerar subchaves
+\item Cifrar/decifrar um bloco
+\item Cifrar/decifrar uma mensagem (ECB ou CBC) 
+\end{DoxyItemize}Este é o diagrama das funções utilizadas por essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph}
+\end{center}
+\end{figure}

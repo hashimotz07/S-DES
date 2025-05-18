@@ -1,0 +1,21 @@
+\hypertarget{_2home_2iasmimqf_2UnB_2Seguran_xC3_xA7a_2S-DES_2src_2input_8hpp-example}{}\doxysection{/home/iasmimqf/\+Un\+B/\+Segurança/\+S-\/\+DES/src/input.\+hpp}
+Solicita ao usuário uma chave de 10 bits \begin{DoxyReturn}{Retorna}
+int Chave convertida para inteiro
+\end{DoxyReturn}
+
+\begin{DoxyItemize}
+\item Oferece opção de usar chave padrão (1010000010)
+\item Valida o tamanho da entrada (exatamente 10 bits)
+\item Converte string binária para inteiro
+\end{DoxyItemize}
+
+\begin{DoxyWarning}{Aviso}
+Não valida caracteres inválidos (apenas tamanho)
+\end{DoxyWarning}
+int chave = \mbox{\hyperlink{src_2input_8hpp_a6ff5f340adbe5aca5d8ead9bb809ec2c}{ler\+Chave()}}; // Usuário digita \char`\"{}n\char`\"{} e depois \char`\"{}1110001110\char`\"{} // Retorna 0b1110001110 (910)
+
+
+\begin{DoxyCodeInclude}{0}
+
+\end{DoxyCodeInclude}
+ça/\+S-\/\+DES/src/input.hpp 

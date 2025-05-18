@@ -1,0 +1,151 @@
+\hypertarget{src__imprimir_2permutation_8hpp}{}\doxysection{Referência do Arquivo src\+\_\+imprimir/permutation.hpp}
+\label{src__imprimir_2permutation_8hpp}\index{src\_imprimir/permutation.hpp@{src\_imprimir/permutation.hpp}}
+{\ttfamily \#include \char`\"{}utils.\+hpp\char`\"{}}\newline
+Gráfico de dependência de inclusões para permutation.\+hpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=268pt]{src__imprimir_2permutation_8hpp__incl}
+\end{center}
+\end{figure}
+Este grafo mostra quais arquivos estão direta ou indiretamente relacionados com esse arquivo\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=242pt]{src__imprimir_2permutation_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{src__imprimir_2permutation_8hpp_ae48b97ba0911dace5bc144be81b339fa}{permuta}} (int n, vector$<$ int $>$ \&v, int total\+\_\+bits=10)
+\begin{DoxyCompactList}\small\item\em Aplica permutação com logs (documentação completa em \mbox{\hyperlink{src_2permutation_8hpp}{src/permutation.\+hpp}}) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variáveis}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ int $>$ \mbox{\hyperlink{src__imprimir_2permutation_8hpp_a8114b564f078203a5acd9b90e5aec74e}{p10}} = \{3, 5, 2, 7, 4, 10, 1, 9, 8, 6\}
+\begin{DoxyCompactList}\small\item\em P10 (10→10 bits) \end{DoxyCompactList}\item 
+vector$<$ int $>$ \mbox{\hyperlink{src__imprimir_2permutation_8hpp_a0042110762ef8573a94a05f001741c4f}{p8}} = \{6, 3, 7, 4, 8, 5, 10, 9\}
+\begin{DoxyCompactList}\small\item\em P8 (10→8 bits) \end{DoxyCompactList}\item 
+vector$<$ int $>$ \mbox{\hyperlink{src__imprimir_2permutation_8hpp_a32d0ad2788f7f0239aa80c1603127b94}{p4}} = \{2, 4, 3, 1\}
+\begin{DoxyCompactList}\small\item\em P4 (4→4 bits) \end{DoxyCompactList}\item 
+vector$<$ int $>$ \mbox{\hyperlink{src__imprimir_2permutation_8hpp_a6e1f53e628c2199a82d91efe8349e0cd}{ip}} = \{2, 6, 3, 1, 4, 8, 5, 7\}
+\begin{DoxyCompactList}\small\item\em Permutação inicial. \end{DoxyCompactList}\item 
+vector$<$ int $>$ \mbox{\hyperlink{src__imprimir_2permutation_8hpp_a071b2954b999eb1a078fc97a55aa3b6d}{ipi}} = \{4, 1, 3, 5, 7, 2, 8, 6\}
+\begin{DoxyCompactList}\small\item\em Permutação inversa. \end{DoxyCompactList}\item 
+vector$<$ int $>$ \mbox{\hyperlink{src__imprimir_2permutation_8hpp_a68e698b6d7966d74d15209c178fd44da}{ep}} = \{4, 1, 2, 3, 2, 3, 4, 1\}
+\begin{DoxyCompactList}\small\item\em Expansão (4→8 bits) \end{DoxyCompactList}\item 
+vector$<$ vector$<$ int $>$ $>$ \mbox{\hyperlink{src__imprimir_2permutation_8hpp_a7ab94b582eebef92f8742cfa1b5a3959}{s0}} = \{\{1, 0, 3, 2\}, \{3, 2, 1, 0\}, \{0, 2, 1, 3\}, \{3, 1, 3, 2\}\}
+\begin{DoxyCompactList}\small\item\em S-\/\+Box 0 (4→2 bits) \end{DoxyCompactList}\item 
+vector$<$ vector$<$ int $>$ $>$ \mbox{\hyperlink{src__imprimir_2permutation_8hpp_a1aa87b371925809c9e754bbe15ce28b2}{s1}} = \{\{0, 1, 2, 3\}, \{2, 0, 1, 3\}, \{3, 0, 1, 0\}, \{2, 1, 0, 3\}\}
+\begin{DoxyCompactList}\small\item\em S-\/\+Box 1 (4→2 bits) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Funções}
+\mbox{\Hypertarget{src__imprimir_2permutation_8hpp_ae48b97ba0911dace5bc144be81b339fa}\label{src__imprimir_2permutation_8hpp_ae48b97ba0911dace5bc144be81b339fa}} 
+\index{permutation.hpp@{permutation.hpp}!permuta@{permuta}}
+\index{permuta@{permuta}!permutation.hpp@{permutation.hpp}}
+\doxysubsubsection{\texorpdfstring{permuta()}{permuta()}}
+{\footnotesize\ttfamily int permuta (\begin{DoxyParamCaption}\item[{int}]{n,  }\item[{vector$<$ int $>$ \&}]{v,  }\item[{int}]{total\+\_\+bits = {\ttfamily 10} }\end{DoxyParamCaption})}
+
+
+
+Aplica permutação com logs (documentação completa em \mbox{\hyperlink{src_2permutation_8hpp}{src/permutation.\+hpp}}) 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em n} & Valor a permutar \\
+\hline
+{\em v} & Tabela de permutação \\
+\hline
+{\em total\+\_\+bits} & Tamanho da entrada (padrão\+: 10) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor permutado @debug Logs mostram entrada/saída e tabela usada 
+\end{DoxyReturn}
+
+
+\doxysubsection{Variáveis}
+\mbox{\Hypertarget{src__imprimir_2permutation_8hpp_a68e698b6d7966d74d15209c178fd44da}\label{src__imprimir_2permutation_8hpp_a68e698b6d7966d74d15209c178fd44da}} 
+\index{permutation.hpp@{permutation.hpp}!ep@{ep}}
+\index{ep@{ep}!permutation.hpp@{permutation.hpp}}
+\doxysubsubsection{\texorpdfstring{ep}{ep}}
+{\footnotesize\ttfamily vector$<$int$>$ ep = \{4, 1, 2, 3, 2, 3, 4, 1\}}
+
+
+
+Expansão (4→8 bits) 
+
+\mbox{\Hypertarget{src__imprimir_2permutation_8hpp_a6e1f53e628c2199a82d91efe8349e0cd}\label{src__imprimir_2permutation_8hpp_a6e1f53e628c2199a82d91efe8349e0cd}} 
+\index{permutation.hpp@{permutation.hpp}!ip@{ip}}
+\index{ip@{ip}!permutation.hpp@{permutation.hpp}}
+\doxysubsubsection{\texorpdfstring{ip}{ip}}
+{\footnotesize\ttfamily vector$<$int$>$ ip = \{2, 6, 3, 1, 4, 8, 5, 7\}}
+
+
+
+Permutação inicial. 
+
+\mbox{\Hypertarget{src__imprimir_2permutation_8hpp_a071b2954b999eb1a078fc97a55aa3b6d}\label{src__imprimir_2permutation_8hpp_a071b2954b999eb1a078fc97a55aa3b6d}} 
+\index{permutation.hpp@{permutation.hpp}!ipi@{ipi}}
+\index{ipi@{ipi}!permutation.hpp@{permutation.hpp}}
+\doxysubsubsection{\texorpdfstring{ipi}{ipi}}
+{\footnotesize\ttfamily vector$<$int$>$ ipi = \{4, 1, 3, 5, 7, 2, 8, 6\}}
+
+
+
+Permutação inversa. 
+
+\mbox{\Hypertarget{src__imprimir_2permutation_8hpp_a8114b564f078203a5acd9b90e5aec74e}\label{src__imprimir_2permutation_8hpp_a8114b564f078203a5acd9b90e5aec74e}} 
+\index{permutation.hpp@{permutation.hpp}!p10@{p10}}
+\index{p10@{p10}!permutation.hpp@{permutation.hpp}}
+\doxysubsubsection{\texorpdfstring{p10}{p10}}
+{\footnotesize\ttfamily vector$<$int$>$ p10 = \{3, 5, 2, 7, 4, 10, 1, 9, 8, 6\}}
+
+
+
+P10 (10→10 bits) 
+
+\mbox{\Hypertarget{src__imprimir_2permutation_8hpp_a32d0ad2788f7f0239aa80c1603127b94}\label{src__imprimir_2permutation_8hpp_a32d0ad2788f7f0239aa80c1603127b94}} 
+\index{permutation.hpp@{permutation.hpp}!p4@{p4}}
+\index{p4@{p4}!permutation.hpp@{permutation.hpp}}
+\doxysubsubsection{\texorpdfstring{p4}{p4}}
+{\footnotesize\ttfamily vector$<$int$>$ p4 = \{2, 4, 3, 1\}}
+
+
+
+P4 (4→4 bits) 
+
+\mbox{\Hypertarget{src__imprimir_2permutation_8hpp_a0042110762ef8573a94a05f001741c4f}\label{src__imprimir_2permutation_8hpp_a0042110762ef8573a94a05f001741c4f}} 
+\index{permutation.hpp@{permutation.hpp}!p8@{p8}}
+\index{p8@{p8}!permutation.hpp@{permutation.hpp}}
+\doxysubsubsection{\texorpdfstring{p8}{p8}}
+{\footnotesize\ttfamily vector$<$int$>$ p8 = \{6, 3, 7, 4, 8, 5, 10, 9\}}
+
+
+
+P8 (10→8 bits) 
+
+\mbox{\Hypertarget{src__imprimir_2permutation_8hpp_a7ab94b582eebef92f8742cfa1b5a3959}\label{src__imprimir_2permutation_8hpp_a7ab94b582eebef92f8742cfa1b5a3959}} 
+\index{permutation.hpp@{permutation.hpp}!s0@{s0}}
+\index{s0@{s0}!permutation.hpp@{permutation.hpp}}
+\doxysubsubsection{\texorpdfstring{s0}{s0}}
+{\footnotesize\ttfamily vector$<$vector$<$int$>$ $>$ s0 = \{\{1, 0, 3, 2\}, \{3, 2, 1, 0\}, \{0, 2, 1, 3\}, \{3, 1, 3, 2\}\}}
+
+
+
+S-\/\+Box 0 (4→2 bits) 
+
+\mbox{\Hypertarget{src__imprimir_2permutation_8hpp_a1aa87b371925809c9e754bbe15ce28b2}\label{src__imprimir_2permutation_8hpp_a1aa87b371925809c9e754bbe15ce28b2}} 
+\index{permutation.hpp@{permutation.hpp}!s1@{s1}}
+\index{s1@{s1}!permutation.hpp@{permutation.hpp}}
+\doxysubsubsection{\texorpdfstring{s1}{s1}}
+{\footnotesize\ttfamily vector$<$vector$<$int$>$ $>$ s1 = \{\{0, 1, 2, 3\}, \{2, 0, 1, 3\}, \{3, 0, 1, 0\}, \{2, 1, 0, 3\}\}}
+
+
+
+S-\/\+Box 1 (4→2 bits) 
+
