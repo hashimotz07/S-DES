@@ -27,7 +27,7 @@ string ECB_encripta(vector<string>& plainText, int chave){
     string cipherText="";
     for(string blocoS : plainText){
         int bloco = toInt(blocoS, 8);
-        cipherText += toBin(encriptacao(bloco, chave), 8);
+        cipherText += toBin(encriptacao(bloco, chave), 8) + " ";
     }
     return cipherText;
 }
@@ -44,7 +44,7 @@ string ECB_decripta(vector<string>& cipherText, int chave){
     string plainText="";
     for(string blocoS : cipherText){
         int bloco = toInt(blocoS, 8);
-        plainText += toBin(decriptacao(bloco, chave), 8);
+        plainText += toBin(decriptacao(bloco, chave), 8) + " ";
     }
     return plainText;
 }
@@ -68,7 +68,7 @@ string CBC_encripta(vector<string>& plainText, int chave, int IV){
     for(string blocoS : plainText){
         last = toInt(blocoS, 8) ^ last;
         last = encriptacao(last, chave);
-        cipherText += toBin(last, 8);
+        cipherText += toBin(last, 8) + " ";
     }
     return cipherText;
 } 
