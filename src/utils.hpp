@@ -3,7 +3,6 @@
  * @brief Utilitários para manipulação de bits, conversões e processamento de mensagens para o algoritmo S-DES
  * @author Iasmim Freitas
  * @author Lucas Hashimoto
- * @copyright [Se aplicável, ex: MIT License]
  * @date 2025-05
  */
 
