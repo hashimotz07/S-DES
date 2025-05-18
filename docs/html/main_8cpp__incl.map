@@ -1,0 +1,13 @@
+<map id="src_imprimir/main.cpp" name="src_imprimir/main.cpp">
+<area shape="rect" id="node1" title="Interface interativa principal para testes com o algoritmo S&#45;DES." alt="" coords="57,5,225,32"/>
+<area shape="rect" id="node2" href="$src__imprimir_2input_8hpp.html" title="Entrada interativa para testes de encriptação S&#45;DES com logs." alt="" coords="100,80,183,107"/>
+<area shape="rect" id="node3" href="$src__imprimir_2modes_8hpp.html" title="Implementações dos modos ECB e CBC com suporte a debug." alt="" coords="94,155,189,181"/>
+<area shape="rect" id="node4" href="$src__imprimir_2encrypt_8hpp.html" title="Versão com logs de debug &#45; Para documentação completa, consulte src/encrypt.hpp." alt="" coords="92,229,191,256"/>
+<area shape="rect" id="node5" href="$src__imprimir_2ffunction_8hpp.html" title="Versão debug da função Feistel &#45; Documentação completa em src/ffunction.hpp." alt="" coords="88,304,195,331"/>
+<area shape="rect" id="node6" href="$src__imprimir_2keygen_8hpp.html" title="Versão debug da geração de chaves &#45; Documentação completa em src/keygen.hpp." alt="" coords="93,379,190,405"/>
+<area shape="rect" id="node7" href="$src__imprimir_2permutation_8hpp.html" title=" " alt="" coords="76,453,207,480"/>
+<area shape="rect" id="node8" href="$src__imprimir_2utils_8hpp.html" title="Versão com logs de debug &#45; Para documentação completa, consulte src/utils.hpp." alt="" coords="102,528,181,555"/>
+<area shape="rect" id="node9" title=" " alt="" coords="5,603,85,629"/>
+<area shape="rect" id="node10" title=" " alt="" coords="110,603,173,629"/>
+<area shape="rect" id="node11" title=" " alt="" coords="197,603,256,629"/>
+</map>

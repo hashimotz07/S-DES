@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>S-DES: Código-Fonte de src/keygen.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">S-DES
+   </div>
+   <div id="projectbrief">Implementação do algoritmo S-DES</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Busca','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">keygen.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="src_2keygen_8hpp.html">Vá para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="src__imprimir_2permutation_8hpp.html">permutation.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="src_2keygen_8hpp.html#a227d6ed50aaac9b21bf83806aa3ffab0">   28</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="src_2keygen_8hpp.html#a227d6ed50aaac9b21bf83806aa3ffab0">deslocamento_circular</a>(<span class="keywordtype">int</span> n, <span class="keywordtype">int</span> tamanho, <span class="keywordtype">int</span> shift){</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordflow">return</span> ((n&lt;&lt;shift) | ((n&gt;&gt;(tamanho - shift)) &amp; ((1 &lt;&lt; shift)-1))) &amp; ((1&lt;&lt;tamanho)-1);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;}</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="src_2keygen_8hpp.html#a493f9b8159e3d597bac6b91145b2afdc">   50</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="src_2keygen_8hpp.html#a493f9b8159e3d597bac6b91145b2afdc">gerarChaves</a>(<span class="keywordtype">int</span> chave, <span class="keywordtype">int</span> &amp;k1, <span class="keywordtype">int</span> &amp;k2){</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="comment">// permutacao inicial (P10)</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">int</span> permutacao = <a class="code" href="src_2permutation_8hpp.html#ae48b97ba0911dace5bc144be81b339fa">permuta</a>(chave, <a class="code" href="src_2permutation_8hpp.html#a8114b564f078203a5acd9b90e5aec74e">p10</a>);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">int</span> esquerda = (permutacao&gt;&gt;5); <span class="comment">// 5 bits mais significativos</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">int</span> direita = (permutacao); <span class="comment">// 5 bits menos significativos</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="comment">// geracao da k1 (shift de 1 posicao + P8)</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    esquerda = <a class="code" href="src_2keygen_8hpp.html#a227d6ed50aaac9b21bf83806aa3ffab0">deslocamento_circular</a>(esquerda, 5, 1);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    direita = <a class="code" href="src_2keygen_8hpp.html#a227d6ed50aaac9b21bf83806aa3ffab0">deslocamento_circular</a>(direita, 5 , 1);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    k1 = <a class="code" href="src_2permutation_8hpp.html#ae48b97ba0911dace5bc144be81b339fa">permuta</a>((esquerda &lt;&lt; 5) | direita, <a class="code" href="src_2permutation_8hpp.html#a0042110762ef8573a94a05f001741c4f">p8</a>);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="comment">// geracao da k2 (shift de 2 posicoes + p8)</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    esquerda = <a class="code" href="src_2keygen_8hpp.html#a227d6ed50aaac9b21bf83806aa3ffab0">deslocamento_circular</a>(esquerda, 5, 2);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    direita = <a class="code" href="src_2keygen_8hpp.html#a227d6ed50aaac9b21bf83806aa3ffab0">deslocamento_circular</a>(direita, 5 , 2);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    k2 = <a class="code" href="src_2permutation_8hpp.html#ae48b97ba0911dace5bc144be81b339fa">permuta</a>((esquerda &lt;&lt; 5) | direita, <a class="code" href="src_2permutation_8hpp.html#a0042110762ef8573a94a05f001741c4f">p8</a>);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;}</div>
+<div class="ttc" id="asrc_2keygen_8hpp_html_a227d6ed50aaac9b21bf83806aa3ffab0"><div class="ttname"><a href="src_2keygen_8hpp.html#a227d6ed50aaac9b21bf83806aa3ffab0">deslocamento_circular</a></div><div class="ttdeci">int deslocamento_circular(int n, int tamanho, int shift)</div><div class="ttdef"><b>Definition:</b> keygen.hpp:28</div></div>
+<div class="ttc" id="asrc_2keygen_8hpp_html_a493f9b8159e3d597bac6b91145b2afdc"><div class="ttname"><a href="src_2keygen_8hpp.html#a493f9b8159e3d597bac6b91145b2afdc">gerarChaves</a></div><div class="ttdeci">void gerarChaves(int chave, int &amp;k1, int &amp;k2)</div><div class="ttdef"><b>Definition:</b> keygen.hpp:50</div></div>
+<div class="ttc" id="asrc_2permutation_8hpp_html_a0042110762ef8573a94a05f001741c4f"><div class="ttname"><a href="src_2permutation_8hpp.html#a0042110762ef8573a94a05f001741c4f">p8</a></div><div class="ttdeci">vector&lt; int &gt; p8</div><div class="ttdoc">Tabela P8 (10 bits -&gt; 8 bits).</div><div class="ttdef"><b>Definition:</b> permutation.hpp:13</div></div>
+<div class="ttc" id="asrc_2permutation_8hpp_html_a8114b564f078203a5acd9b90e5aec74e"><div class="ttname"><a href="src_2permutation_8hpp.html#a8114b564f078203a5acd9b90e5aec74e">p10</a></div><div class="ttdeci">vector&lt; int &gt; p10</div><div class="ttdoc">Tabela P10 (10 bits de entrada).</div><div class="ttdef"><b>Definition:</b> permutation.hpp:12</div></div>
+<div class="ttc" id="asrc_2permutation_8hpp_html_ae48b97ba0911dace5bc144be81b339fa"><div class="ttname"><a href="src_2permutation_8hpp.html#ae48b97ba0911dace5bc144be81b339fa">permuta</a></div><div class="ttdeci">int permuta(int n, vector&lt; int &gt; &amp;v, int total_bits=10)</div><div class="ttdoc">Aplica uma permutação em um número inteiro usando uma tabela específica.</div><div class="ttdef"><b>Definition:</b> permutation.hpp:46</div></div>
+<div class="ttc" id="asrc__imprimir_2permutation_8hpp_html"><div class="ttname"><a href="src__imprimir_2permutation_8hpp.html">permutation.hpp</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

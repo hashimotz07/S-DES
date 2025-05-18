@@ -1,0 +1,235 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>S-DES: Referência do Arquivo src_imprimir/encrypt.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">S-DES
+   </div>
+   <div id="projectbrief">Implementação do algoritmo S-DES</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Busca','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_11a268ac8b2d84430366fea5fc40e6f5.html">src_imprimir</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funções</a>  </div>
+  <div class="headertitle">
+<div class="title">Referência do Arquivo encrypt.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Versão com logs de debug - Para documentação completa, consulte <a class="el" href="src_2encrypt_8hpp.html" title="Implementação das funções de encriptação e decriptação do algoritmo S-DES.">src/encrypt.hpp</a>.  
+<a href="#details">Mais...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="src__imprimir_2ffunction_8hpp_source.html">ffunction.hpp</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Gráfico de dependência de inclusões para encrypt.hpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="src__imprimir_2encrypt_8hpp__incl.png" border="0" usemap="#asrc__imprimir_2encrypt_8hpp" alt=""/></div>
+<map name="asrc__imprimir_2encrypt_8hpp" id="asrc__imprimir_2encrypt_8hpp">
+<area shape="rect" title="Versão com logs de debug &#45; Para documentação completa, consulte src/encrypt.hpp." alt="" coords="49,5,234,32"/>
+<area shape="rect" href="src__imprimir_2ffunction_8hpp.html" title="Versão debug da função Feistel &#45; Documentação completa em src/ffunction.hpp." alt="" coords="88,80,195,107"/>
+<area shape="rect" href="src__imprimir_2keygen_8hpp.html" title="Versão debug da geração de chaves &#45; Documentação completa em src/keygen.hpp." alt="" coords="93,155,190,181"/>
+<area shape="rect" href="src__imprimir_2permutation_8hpp.html" title=" " alt="" coords="76,229,207,256"/>
+<area shape="rect" href="src__imprimir_2utils_8hpp.html" title="Versão com logs de debug &#45; Para documentação completa, consulte src/utils.hpp." alt="" coords="102,304,181,331"/>
+<area shape="rect" title=" " alt="" coords="5,379,85,405"/>
+<area shape="rect" title=" " alt="" coords="110,379,173,405"/>
+<area shape="rect" title=" " alt="" coords="197,379,256,405"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Este grafo mostra quais arquivos estão direta ou indiretamente relacionados com esse arquivo:</div>
+<div class="dyncontent">
+<div class="center"><img src="src__imprimir_2encrypt_8hpp__dep__incl.png" border="0" usemap="#asrc__imprimir_2encrypt_8hppdep" alt=""/></div>
+<map name="asrc__imprimir_2encrypt_8hppdep" id="asrc__imprimir_2encrypt_8hppdep">
+<area shape="rect" title="Versão com logs de debug &#45; Para documentação completa, consulte src/encrypt.hpp." alt="" coords="5,5,191,32"/>
+<area shape="rect" href="src__imprimir_2modes_8hpp.html" title="Implementações dos modos ECB e CBC com suporte a debug." alt="" coords="8,80,188,107"/>
+<area shape="rect" href="src__imprimir_2input_8hpp.html" title="Entrada interativa para testes de encriptação S&#45;DES com logs." alt="" coords="13,155,183,181"/>
+<area shape="rect" href="main_8cpp.html" title="Interface interativa principal para testes com o algoritmo S&#45;DES." alt="" coords="14,229,182,256"/>
+</map>
+</div>
+</div>
+<p><a href="src__imprimir_2encrypt_8hpp_source.html">Vá para o código-fonte desse arquivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funções</h2></td></tr>
+<tr class="memitem:ad38abf9d210999233910b38698fe6edc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="src__imprimir_2encrypt_8hpp.html#ad38abf9d210999233910b38698fe6edc">encriptacao</a> (int n, int k)</td></tr>
+<tr class="memdesc:ad38abf9d210999233910b38698fe6edc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Realiza encriptação ou decriptação com base na flag <code>encriptar</code> @debug Mostra:  <a href="src__imprimir_2encrypt_8hpp.html#ad38abf9d210999233910b38698fe6edc">Mais...</a><br /></td></tr>
+<tr class="separator:ad38abf9d210999233910b38698fe6edc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a406830071699a6b9a7e9d78dc0f2912a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="src__imprimir_2encrypt_8hpp.html#a406830071699a6b9a7e9d78dc0f2912a">decriptacao</a> (int n, int k)</td></tr>
+<tr class="memdesc:a406830071699a6b9a7e9d78dc0f2912a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wrapper para decriptação usando <code>encriptacao</code> com flag apropriada.  <a href="src__imprimir_2encrypt_8hpp.html#a406830071699a6b9a7e9d78dc0f2912a">Mais...</a><br /></td></tr>
+<tr class="separator:a406830071699a6b9a7e9d78dc0f2912a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descrição detalhada</h2>
+<div class="textblock"><p>Versão com logs de debug - Para documentação completa, consulte <a class="el" href="src_2encrypt_8hpp.html" title="Implementação das funções de encriptação e decriptação do algoritmo S-DES.">src/encrypt.hpp</a>. </p>
+<dl class="section note"><dt>Observação</dt><dd>Esta versão contém implementações idênticas às origens, mas com:<ul>
+<li>Flags de controle de impressão (imprimir, encriptar)</li>
+<li>Logs detalhados do processo interno</li>
+</ul>
+</dd></dl>
+<dl class="section see"><dt>Veja também</dt><dd><a class="el" href="src_2encrypt_8hpp.html" title="Implementação das funções de encriptação e decriptação do algoritmo S-DES.">src/encrypt.hpp</a> para documentação completa das funções </dd></dl>
+</div><h2 class="groupheader">Funções</h2>
+<a id="a406830071699a6b9a7e9d78dc0f2912a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a406830071699a6b9a7e9d78dc0f2912a">&#9670;&nbsp;</a></span>decriptacao()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int decriptacao </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>k</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Wrapper para decriptação usando <code>encriptacao</code> com flag apropriada. </p>
+<div class="dynheader">
+Este é o diagrama das funções utilizadas por essa função:</div>
+<div class="dyncontent">
+<div class="center"><img src="src__imprimir_2encrypt_8hpp_a406830071699a6b9a7e9d78dc0f2912a_cgraph.png" border="0" usemap="#asrc__imprimir_2encrypt_8hpp_a406830071699a6b9a7e9d78dc0f2912a_cgraph" alt=""/></div>
+<map name="asrc__imprimir_2encrypt_8hpp_a406830071699a6b9a7e9d78dc0f2912a_cgraph" id="asrc__imprimir_2encrypt_8hpp_a406830071699a6b9a7e9d78dc0f2912a_cgraph">
+<area shape="rect" title="Wrapper para decriptação usando encriptacao com flag apropriada." alt="" coords="5,107,104,133"/>
+<area shape="rect" href="src_2encrypt_8hpp.html#ad38abf9d210999233910b38698fe6edc" title="Realiza a encriptação de um bloco de 8 bits usando S&#45;DES." alt="" coords="152,107,251,133"/>
+<area shape="rect" href="src_2ffunction_8hpp.html#ac2bd13e6b0b85c624bad5bcaf7eed2da" title=" " alt="" coords="321,5,380,32"/>
+<area shape="rect" href="src_2ffunction_8hpp.html#acb1ac1862e56297cc8569d316ee782f3" title="Rede de Feistel completa (2 rodadas) para encriptação/decriptação." alt="" coords="319,56,382,83"/>
+<area shape="rect" href="src_2keygen_8hpp.html#a493f9b8159e3d597bac6b91145b2afdc" title=" " alt="" coords="299,107,403,133"/>
+<area shape="rect" href="src_2ffunction_8hpp.html#a4fc5bb1f95458cfb96ee7621e54cc1d7" title="Aplica a permutação inversa (IP⁻¹) em um bloco de 8 bits." alt="" coords="668,119,799,145"/>
+<area shape="rect" href="src_2ffunction_8hpp.html#aa42438a26d01098dc44d9a90ceb0b7fb" title="Aplica a permutação inicial (IP) em um bloco de 8 bits." alt="" coords="466,208,605,235"/>
+<area shape="rect" href="src_2ffunction_8hpp.html#ac5bfbbcbd49b622acb9458ec931456ff" title="Etapa individual da rede de Feistel (F + XOR)." alt="" coords="516,5,555,32"/>
+<area shape="rect" href="src_2ffunction_8hpp.html#a70c963b1dcbab5fac915653f057da5b9" title="Função F (Expansão + S&#45;Box + Permutação) do S&#45;DES." alt="" coords="714,5,753,32"/>
+<area shape="rect" href="src_2permutation_8hpp.html#ae48b97ba0911dace5bc144be81b339fa" title="Aplica uma permutação em um número inteiro usando uma tabela específica." alt="" coords="847,81,924,108"/>
+<area shape="rect" href="src_2ffunction_8hpp.html#a55ab14574140bf9c9646bc4b64a25b4e" title=" " alt="" coords="855,5,915,32"/>
+<area shape="rect" href="src_2keygen_8hpp.html#a227d6ed50aaac9b21bf83806aa3ffab0" title=" " alt="" coords="451,107,620,133"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad38abf9d210999233910b38698fe6edc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad38abf9d210999233910b38698fe6edc">&#9670;&nbsp;</a></span>encriptacao()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int encriptacao </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>k</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Realiza encriptação ou decriptação com base na flag <code>encriptar</code> @debug Mostra: </p>
+<ul>
+<li>Permutações iniciais/finais</li>
+<li>Subchaves geradas</li>
+<li>Resultado das rodadas Feistel </li>
+</ul>
+<div class="dynheader">
+Este é o diagrama das funções utilizadas por essa função:</div>
+<div class="dyncontent">
+<div class="center"><img src="src__imprimir_2encrypt_8hpp_ad38abf9d210999233910b38698fe6edc_cgraph.png" border="0" usemap="#asrc__imprimir_2encrypt_8hpp_ad38abf9d210999233910b38698fe6edc_cgraph" alt=""/></div>
+<map name="asrc__imprimir_2encrypt_8hpp_ad38abf9d210999233910b38698fe6edc_cgraph" id="asrc__imprimir_2encrypt_8hpp_ad38abf9d210999233910b38698fe6edc_cgraph">
+<area shape="rect" title="Realiza encriptação ou decriptação com base na flag encriptar @debug Mostra:" alt="" coords="5,132,104,159"/>
+<area shape="rect" href="src_2ffunction_8hpp.html#ac2bd13e6b0b85c624bad5bcaf7eed2da" title=" " alt="" coords="175,5,233,32"/>
+<area shape="rect" href="src_2ffunction_8hpp.html#acb1ac1862e56297cc8569d316ee782f3" title="Rede de Feistel completa (2 rodadas) para encriptação/decriptação." alt="" coords="173,56,235,83"/>
+<area shape="rect" href="src_2keygen_8hpp.html#a493f9b8159e3d597bac6b91145b2afdc" title=" " alt="" coords="152,107,256,133"/>
+<area shape="rect" href="src_2ffunction_8hpp.html#a4fc5bb1f95458cfb96ee7621e54cc1d7" title="Aplica a permutação inversa (IP⁻¹) em um bloco de 8 bits." alt="" coords="521,119,652,145"/>
+<area shape="rect" href="src_2ffunction_8hpp.html#aa42438a26d01098dc44d9a90ceb0b7fb" title="Aplica a permutação inicial (IP) em um bloco de 8 bits." alt="" coords="319,208,458,235"/>
+<area shape="rect" href="src_2utils_8hpp.html#a29bdece031c7545c0e1228cb3c236b45" title=" " alt="" coords="176,259,232,285"/>
+<area shape="rect" href="src_2ffunction_8hpp.html#ac5bfbbcbd49b622acb9458ec931456ff" title="Etapa individual da rede de Feistel (F + XOR)." alt="" coords="369,5,408,32"/>
+<area shape="rect" href="src_2ffunction_8hpp.html#a70c963b1dcbab5fac915653f057da5b9" title="Função F (Expansão + S&#45;Box + Permutação) do S&#45;DES." alt="" coords="567,5,606,32"/>
+<area shape="rect" href="src_2permutation_8hpp.html#ae48b97ba0911dace5bc144be81b339fa" title="Aplica uma permutação em um número inteiro usando uma tabela específica." alt="" coords="700,81,777,108"/>
+<area shape="rect" href="src_2ffunction_8hpp.html#a55ab14574140bf9c9646bc4b64a25b4e" title=" " alt="" coords="709,5,769,32"/>
+<area shape="rect" href="src_2keygen_8hpp.html#a227d6ed50aaac9b21bf83806aa3ffab0" title=" " alt="" coords="304,107,473,133"/>
+</map>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

@@ -1,0 +1,7 @@
+<map id="src_imprimir/ffunction.hpp" name="src_imprimir/ffunction.hpp">
+<area shape="rect" id="node1" title="Versão debug da função Feistel &#45; Documentação completa em src/ffunction.hpp." alt="" coords="5,5,199,32"/>
+<area shape="rect" id="node2" href="$src__imprimir_2encrypt_8hpp.html" title="Versão com logs de debug &#45; Para documentação completa, consulte src/encrypt.hpp." alt="" coords="9,80,195,107"/>
+<area shape="rect" id="node3" href="$src__imprimir_2modes_8hpp.html" title="Implementações dos modos ECB e CBC com suporte a debug." alt="" coords="12,155,192,181"/>
+<area shape="rect" id="node4" href="$src__imprimir_2input_8hpp.html" title="Entrada interativa para testes de encriptação S&#45;DES com logs." alt="" coords="17,229,187,256"/>
+<area shape="rect" id="node5" href="$main_8cpp.html" title="Interface interativa principal para testes com o algoritmo S&#45;DES." alt="" coords="18,304,186,331"/>
+</map>

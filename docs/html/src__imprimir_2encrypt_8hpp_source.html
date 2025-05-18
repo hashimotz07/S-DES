@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>S-DES: Código-Fonte de src_imprimir/encrypt.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">S-DES
+   </div>
+   <div id="projectbrief">Implementação do algoritmo S-DES</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Busca','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_11a268ac8b2d84430366fea5fc40e6f5.html">src_imprimir</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">encrypt.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="src__imprimir_2encrypt_8hpp.html">Vá para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="src__imprimir_2ffunction_8hpp.html">ffunction.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="src__imprimir_2encrypt_8hpp.html#ad38abf9d210999233910b38698fe6edc">   20</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="src_2encrypt_8hpp.html#ad38abf9d210999233910b38698fe6edc">encriptacao</a>(<span class="keywordtype">int</span> n, <span class="keywordtype">int</span> k){</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">int</span> k1, k2;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">bool</span> imprimiPausa = <a class="code" href="src_2utils_8hpp.html#a4c81ce717a1cb4424918e04a38ca83ec">imprimir</a>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="src_2utils_8hpp.html#a4c81ce717a1cb4424918e04a38ca83ec">imprimir</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="src_2keygen_8hpp.html#a493f9b8159e3d597bac6b91145b2afdc">gerarChaves</a>(k, k1, k2);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="src_2utils_8hpp.html#a4c81ce717a1cb4424918e04a38ca83ec">imprimir</a> = imprimiPausa;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="src_2utils_8hpp.html#a721eda3d9c9eb4176640c16ef7da6222">encriptar</a>&amp;1) swap(k1, k2);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="src_2utils_8hpp.html#a4c81ce717a1cb4424918e04a38ca83ec">imprimir</a>){</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;\n====================== S-DES - &quot;</span> &lt;&lt; (<a class="code" href="src_2utils_8hpp.html#a721eda3d9c9eb4176640c16ef7da6222">encriptar</a>&amp;1 ? <span class="stringliteral">&quot;Decriptação&quot;</span> : <span class="stringliteral">&quot;Encriptação&quot;</span>)  &lt;&lt; <span class="stringliteral">&quot; ======================\n\n&quot;</span>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;Bloco de entrada:      &quot;</span> &lt;&lt; <a class="code" href="src_2utils_8hpp.html#a29bdece031c7545c0e1228cb3c236b45">toBin</a>(n, 8) &lt;&lt; endl;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;Chave de 10 bits:      &quot;</span> &lt;&lt; <a class="code" href="src_2utils_8hpp.html#a29bdece031c7545c0e1228cb3c236b45">toBin</a>(k, 10) &lt;&lt; endl;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;\nSubchaves geradas:\n&quot;</span>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;  K1 = &quot;</span> &lt;&lt; <a class="code" href="src_2utils_8hpp.html#a29bdece031c7545c0e1228cb3c236b45">toBin</a>(k1, 8) &lt;&lt; endl;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;  K2 = &quot;</span> &lt;&lt; <a class="code" href="src_2utils_8hpp.html#a29bdece031c7545c0e1228cb3c236b45">toBin</a>(k2, 8) &lt;&lt; endl;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;\n---------------------------------------------------------------\n&quot;</span>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;[1] Permutação Inicial (IP)\n\n&quot;</span>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;  Entrada:             &quot;</span> &lt;&lt; <a class="code" href="src_2utils_8hpp.html#a29bdece031c7545c0e1228cb3c236b45">toBin</a>(n, 8) &lt;&lt; endl;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    }</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    n = <a class="code" href="src_2ffunction_8hpp.html#aa42438a26d01098dc44d9a90ceb0b7fb">permutacaoInicial</a>(n);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keyword">auto</span> [l, r] = <a class="code" href="src_2ffunction_8hpp.html#ac2bd13e6b0b85c624bad5bcaf7eed2da">dividi</a>(n);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="src_2utils_8hpp.html#a4c81ce717a1cb4424918e04a38ca83ec">imprimir</a>){</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;  Após IP:             &quot;</span> &lt;&lt; <a class="code" href="src_2utils_8hpp.html#a29bdece031c7545c0e1228cb3c236b45">toBin</a>(n, 8) &lt;&lt; endl;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;\n---------------------------------------------------------------\n&quot;</span>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;[2] Divisão em metades\n\n&quot;</span>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;  L (4 bits):          &quot;</span> &lt;&lt; <a class="code" href="src_2utils_8hpp.html#a29bdece031c7545c0e1228cb3c236b45">toBin</a>(l, 4) &lt;&lt; endl;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;  R (4 bits):          &quot;</span> &lt;&lt; <a class="code" href="src_2utils_8hpp.html#a29bdece031c7545c0e1228cb3c236b45">toBin</a>(r, 4) &lt;&lt; endl;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;\n---------------------------------------------------------------\n&quot;</span>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;[3] Rodadas de Feistel\n\n&quot;</span>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    }</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    n = <a class="code" href="src_2ffunction_8hpp.html#acb1ac1862e56297cc8569d316ee782f3">feistel</a>(l, r, k1, k2);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="src_2utils_8hpp.html#a4c81ce717a1cb4424918e04a38ca83ec">imprimir</a>){</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;\n---------------------------------------------------------------\n&quot;</span>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;[4]  Permutação Final (IP⁻¹)\n\n&quot;</span>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;  Entrada:             &quot;</span> &lt;&lt; <a class="code" href="src_2utils_8hpp.html#a29bdece031c7545c0e1228cb3c236b45">toBin</a>(n, 8) &lt;&lt; endl;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    }</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    n = <a class="code" href="src_2ffunction_8hpp.html#a4fc5bb1f95458cfb96ee7621e54cc1d7">permutacaoFinal</a>(n);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="src_2utils_8hpp.html#a4c81ce717a1cb4424918e04a38ca83ec">imprimir</a>)</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;  Saída cifrada:       &quot;</span> &lt;&lt; <a class="code" href="src_2utils_8hpp.html#a29bdece031c7545c0e1228cb3c236b45">toBin</a>(n, 8) &lt;&lt; endl;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordflow">return</span> n;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;}</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="src__imprimir_2encrypt_8hpp.html#a406830071699a6b9a7e9d78dc0f2912a">   68</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="src_2encrypt_8hpp.html#a406830071699a6b9a7e9d78dc0f2912a">decriptacao</a>(<span class="keywordtype">int</span> n, <span class="keywordtype">int</span> k){</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <a class="code" href="src_2utils_8hpp.html#a721eda3d9c9eb4176640c16ef7da6222">encriptar</a> = 1;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    n = <a class="code" href="src_2encrypt_8hpp.html#ad38abf9d210999233910b38698fe6edc">encriptacao</a>(n, k);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <a class="code" href="src_2utils_8hpp.html#a721eda3d9c9eb4176640c16ef7da6222">encriptar</a> = 2;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordflow">return</span> n;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;}</div>
+<div class="ttc" id="asrc_2encrypt_8hpp_html_a406830071699a6b9a7e9d78dc0f2912a"><div class="ttname"><a href="src_2encrypt_8hpp.html#a406830071699a6b9a7e9d78dc0f2912a">decriptacao</a></div><div class="ttdeci">int decriptacao(int n, int k)</div><div class="ttdoc">Função conveniente para decriptação.</div><div class="ttdef"><b>Definition:</b> encrypt.hpp:65</div></div>
+<div class="ttc" id="asrc_2encrypt_8hpp_html_ad38abf9d210999233910b38698fe6edc"><div class="ttname"><a href="src_2encrypt_8hpp.html#ad38abf9d210999233910b38698fe6edc">encriptacao</a></div><div class="ttdeci">int encriptacao(int n, int k)</div><div class="ttdoc">Realiza a encriptação de um bloco de 8 bits usando S-DES.</div><div class="ttdef"><b>Definition:</b> encrypt.hpp:39</div></div>
+<div class="ttc" id="asrc_2ffunction_8hpp_html_a4fc5bb1f95458cfb96ee7621e54cc1d7"><div class="ttname"><a href="src_2ffunction_8hpp.html#a4fc5bb1f95458cfb96ee7621e54cc1d7">permutacaoFinal</a></div><div class="ttdeci">int permutacaoFinal(int n)</div><div class="ttdoc">Aplica a permutação inversa (IP⁻¹) em um bloco de 8 bits.</div><div class="ttdef"><b>Definition:</b> ffunction.hpp:29</div></div>
+<div class="ttc" id="asrc_2ffunction_8hpp_html_aa42438a26d01098dc44d9a90ceb0b7fb"><div class="ttname"><a href="src_2ffunction_8hpp.html#aa42438a26d01098dc44d9a90ceb0b7fb">permutacaoInicial</a></div><div class="ttdeci">int permutacaoInicial(int n)</div><div class="ttdoc">Aplica a permutação inicial (IP) em um bloco de 8 bits.</div><div class="ttdef"><b>Definition:</b> ffunction.hpp:18</div></div>
+<div class="ttc" id="asrc_2ffunction_8hpp_html_ac2bd13e6b0b85c624bad5bcaf7eed2da"><div class="ttname"><a href="src_2ffunction_8hpp.html#ac2bd13e6b0b85c624bad5bcaf7eed2da">dividi</a></div><div class="ttdeci">pair&lt; int, int &gt; dividi(int n)</div><div class="ttdef"><b>Definition:</b> ffunction.hpp:43</div></div>
+<div class="ttc" id="asrc_2ffunction_8hpp_html_acb1ac1862e56297cc8569d316ee782f3"><div class="ttname"><a href="src_2ffunction_8hpp.html#acb1ac1862e56297cc8569d316ee782f3">feistel</a></div><div class="ttdeci">int feistel(int l, int r, int k1, int k2)</div><div class="ttdoc">Rede de Feistel completa (2 rodadas) para encriptação/decriptação.</div><div class="ttdef"><b>Definition:</b> ffunction.hpp:106</div></div>
+<div class="ttc" id="asrc_2keygen_8hpp_html_a493f9b8159e3d597bac6b91145b2afdc"><div class="ttname"><a href="src_2keygen_8hpp.html#a493f9b8159e3d597bac6b91145b2afdc">gerarChaves</a></div><div class="ttdeci">void gerarChaves(int chave, int &amp;k1, int &amp;k2)</div><div class="ttdef"><b>Definition:</b> keygen.hpp:50</div></div>
+<div class="ttc" id="asrc_2utils_8hpp_html_a29bdece031c7545c0e1228cb3c236b45"><div class="ttname"><a href="src_2utils_8hpp.html#a29bdece031c7545c0e1228cb3c236b45">toBin</a></div><div class="ttdeci">string toBin(int n, int sz)</div><div class="ttdef"><b>Definition:</b> utils.hpp:36</div></div>
+<div class="ttc" id="asrc_2utils_8hpp_html_a4c81ce717a1cb4424918e04a38ca83ec"><div class="ttname"><a href="src_2utils_8hpp.html#a4c81ce717a1cb4424918e04a38ca83ec">imprimir</a></div><div class="ttdeci">bool imprimir</div><div class="ttdoc">Flag para controle de impressão passo a passo (true = ativa saída detalhada)</div><div class="ttdef"><b>Definition:</b> utils.hpp:19</div></div>
+<div class="ttc" id="asrc_2utils_8hpp_html_a721eda3d9c9eb4176640c16ef7da6222"><div class="ttname"><a href="src_2utils_8hpp.html#a721eda3d9c9eb4176640c16ef7da6222">encriptar</a></div><div class="ttdeci">int encriptar</div><div class="ttdoc">Modo de operação (2 = encriptar, 1 = decriptar)</div><div class="ttdef"><b>Definition:</b> utils.hpp:25</div></div>
+<div class="ttc" id="asrc__imprimir_2ffunction_8hpp_html"><div class="ttname"><a href="src__imprimir_2ffunction_8hpp.html">ffunction.hpp</a></div><div class="ttdoc">Versão debug da função Feistel - Documentação completa em src/ffunction.hpp.</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

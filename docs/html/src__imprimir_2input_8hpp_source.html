@@ -1,0 +1,235 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>S-DES: Código-Fonte de src_imprimir/input.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">S-DES
+   </div>
+   <div id="projectbrief">Implementação do algoritmo S-DES</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Busca','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_11a268ac8b2d84430366fea5fc40e6f5.html">src_imprimir</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">input.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="src__imprimir_2input_8hpp.html">Vá para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="src__imprimir_2modes_8hpp.html">modes.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="src__imprimir_2input_8hpp.html#a6ff5f340adbe5aca5d8ead9bb809ec2c">   17</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="src_2input_8hpp.html#a6ff5f340adbe5aca5d8ead9bb809ec2c">lerChave</a>(){</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">string</span> chave10 = <span class="stringliteral">&quot;1010000010&quot;</span>; <span class="comment">// chave padrão</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot;Deseja usar a chave padrão (1010000010)? (s/n): &quot;</span>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">char</span> usarPadrao;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    cin &gt;&gt; usarPadrao;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordflow">if</span> (usarPadrao == <span class="charliteral">&#39;n&#39;</span> || usarPadrao == <span class="charliteral">&#39;N&#39;</span>) {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keywordflow">while</span>(<span class="keyword">true</span>){</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            cout &lt;&lt; <span class="stringliteral">&quot;Digite a nova chave de 10 bits: &quot;</span>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            cin &gt;&gt; chave10;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            <span class="keywordflow">if</span>((<span class="keywordtype">int</span>)chave10.size() == 10) <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            cout &lt;&lt; <span class="stringliteral">&quot;Chave incompatível com os padrões. Tente novamente!\n\n&quot;</span>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        }</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    }</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="src_2utils_8hpp.html#ae6a7d3a9943391ca6b86a7edfb5ea650">toInt</a>(chave10, 10);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="src__imprimir_2input_8hpp.html#a66bfdec4f185d4513e25f8090efdfbe6">   38</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="src_2input_8hpp.html#a66bfdec4f185d4513e25f8090efdfbe6">lerBloco</a>(){</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">string</span> bloco = <span class="stringliteral">&quot;11010111&quot;</span>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot;Deseja usar o bloco padrão (11010111)? (s/n): &quot;</span>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">char</span> usarPadrao;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    cin &gt;&gt; usarPadrao;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordflow">if</span> (usarPadrao == <span class="charliteral">&#39;n&#39;</span> || usarPadrao == <span class="charliteral">&#39;N&#39;</span>) {</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keywordflow">while</span>(<span class="keyword">true</span>){</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            cout &lt;&lt; <span class="stringliteral">&quot;Digite um bloco de 8 bits: &quot;</span>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            cin &gt;&gt; bloco;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            <span class="keywordflow">if</span>((<span class="keywordtype">int</span>)bloco.size() == 8) <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            cout &lt;&lt; <span class="stringliteral">&quot;Bloco incompatível com os padrões. Tente novamente!\n\n&quot;</span>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        }</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    }</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="src_2utils_8hpp.html#ae6a7d3a9943391ca6b86a7edfb5ea650">toInt</a>(bloco, 8);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;}</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="src__imprimir_2input_8hpp.html#a6c72d425b520788db5dc240569fab497">   59</a></span>&#160;vector&lt;string&gt; <a class="code" href="src_2input_8hpp.html#a6c72d425b520788db5dc240569fab497">lerMenssagem</a>(){</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">string</span> mensagemS = <span class="stringliteral">&quot;11010111 01101100 10111010 11110000&quot;</span>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    vector&lt;string&gt; mensagemV = <a class="code" href="src_2utils_8hpp.html#a7e521b386959ddade896873fafeeb7a1">separaMensagem</a>(mensagemS);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot;Deseja usar a mensagem padrão (&quot;</span> &lt;&lt; mensagemS &lt;&lt;<span class="stringliteral">&quot;)? (s/n): &quot;</span>;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">char</span> usarPadrao;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    cin &gt;&gt; usarPadrao;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordflow">if</span> (usarPadrao == <span class="charliteral">&#39;n&#39;</span> || usarPadrao == <span class="charliteral">&#39;N&#39;</span>) {</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keywordflow">while</span>(<span class="keyword">true</span>){</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            cout &lt;&lt; <span class="stringliteral">&quot;Digite uma mensagem com tamanho multiplo de 8 bits:\n -&gt; &quot;</span>;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            cin.ignore();</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            getline(cin, mensagemS);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            mensagemV = <a class="code" href="src_2utils_8hpp.html#a7e521b386959ddade896873fafeeb7a1">separaMensagem</a>(mensagemS);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            <span class="keywordflow">if</span>(!mensagemV.empty()) <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            cout &lt;&lt; <span class="stringliteral">&quot;Mensagem incompatível com os padrões. Tente novamente!\n\n&quot;</span>;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        }</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    }</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordflow">return</span> mensagemV;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;}</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="src__imprimir_2input_8hpp.html#ad1bb2a04e11c6949ecb338223dc82fec">   84</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="src_2input_8hpp.html#ad1bb2a04e11c6949ecb338223dc82fec">lerIV</a>(){</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordtype">string</span> IVs = <span class="stringliteral">&quot;01010101&quot;</span>;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot;Deseja usar o vetor de inicialização(IV) padrão (01010101)? (s/n): &quot;</span>;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordtype">char</span> usarPadrao;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    cin &gt;&gt; usarPadrao;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordflow">if</span> (usarPadrao == <span class="charliteral">&#39;n&#39;</span> || usarPadrao == <span class="charliteral">&#39;N&#39;</span>) {</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="keywordflow">while</span>(<span class="keyword">true</span>){</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            cout &lt;&lt; <span class="stringliteral">&quot;Digite um IV de 8 bits: &quot;</span>;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            cin &gt;&gt; IVs;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            <span class="keywordflow">if</span>((<span class="keywordtype">int</span>)IVs.size() == 8) <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            cout &lt;&lt; <span class="stringliteral">&quot;IV incompatível com os padrões. Tente novamente!\n\n&quot;</span>;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        }</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    }</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="src_2utils_8hpp.html#ae6a7d3a9943391ca6b86a7edfb5ea650">toInt</a>(IVs, 8);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;}</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00105"></a><span class="lineno"><a class="line" href="src__imprimir_2input_8hpp.html#a8ec3d19c3db18b2b8bdbc55e5e6d34e5">  105</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="src_2input_8hpp.html#a8ec3d19c3db18b2b8bdbc55e5e6d34e5">testarGeracaoDeChave</a>() {</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keywordtype">int</span> chave = <a class="code" href="src_2input_8hpp.html#a6ff5f340adbe5aca5d8ead9bb809ec2c">lerChave</a>();</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keywordtype">int</span> K1, K2;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <a class="code" href="src_2utils_8hpp.html#a4c81ce717a1cb4424918e04a38ca83ec">imprimir</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <a class="code" href="src_2keygen_8hpp.html#a493f9b8159e3d597bac6b91145b2afdc">gerarChaves</a>(chave, K1, K2);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;}</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
+<div class="line"><a name="l00116"></a><span class="lineno"><a class="line" href="src__imprimir_2input_8hpp.html#aa0b0fc2df0b88024b11da4154b3553cd">  116</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="src_2input_8hpp.html#aa0b0fc2df0b88024b11da4154b3553cd">testarBloco</a>() {</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keywordtype">int</span> chave = <a class="code" href="src_2input_8hpp.html#a6ff5f340adbe5aca5d8ead9bb809ec2c">lerChave</a>();</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keywordtype">int</span> bloco = <a class="code" href="src_2input_8hpp.html#a66bfdec4f185d4513e25f8090efdfbe6">lerBloco</a>();</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="keywordtype">int</span> modo, mostrarPasso;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot;\n1 - Encriptar\n2 - Decriptar\nEscolha a operação: &quot;</span>;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    cin &gt;&gt; modo;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot;\n1 - Passo a passo\n2 - Apenas resposta\nEscolha a forma de saída: &quot;</span>;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    cin &gt;&gt; mostrarPasso;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <a class="code" href="src_2utils_8hpp.html#a4c81ce717a1cb4424918e04a38ca83ec">imprimir</a> = mostrarPasso&amp;1;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160; </div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keywordtype">int</span> resultado;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <span class="keywordflow">if</span> (modo == 1)</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        resultado = <a class="code" href="src_2encrypt_8hpp.html#ad38abf9d210999233910b38698fe6edc">encriptacao</a>(bloco, chave);</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        resultado = <a class="code" href="src_2encrypt_8hpp.html#a406830071699a6b9a7e9d78dc0f2912a">decriptacao</a>(bloco, chave);</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160; </div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot;\n====================== Resultado Final =========================\n\n&quot;</span>;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot;  Cifra:               &quot;</span> &lt;&lt; <a class="code" href="src_2utils_8hpp.html#a29bdece031c7545c0e1228cb3c236b45">toBin</a>(resultado, 8) &lt;&lt; endl;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot;\n===============================================================\n&quot;</span>;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;}</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160; </div>
+<div class="line"><a name="l00142"></a><span class="lineno"><a class="line" href="src__imprimir_2input_8hpp.html#a9768e856d01f2135950544866782e1fb">  142</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="src_2input_8hpp.html#a9768e856d01f2135950544866782e1fb">testarMensagem</a>() {</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <span class="keywordtype">int</span> modoCifra, operacao, mostrarPasso, IV;</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160; </div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <span class="keywordtype">int</span> chave = <a class="code" href="src_2input_8hpp.html#a6ff5f340adbe5aca5d8ead9bb809ec2c">lerChave</a>();</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    vector&lt;string&gt; mensagem = <a class="code" href="src_2input_8hpp.html#a6c72d425b520788db5dc240569fab497">lerMenssagem</a>();</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    </div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot;1 - ECB\n2 - CBC\nEscolha o modo de operação: &quot;</span>;</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    cin &gt;&gt; modoCifra;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160; </div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <span class="keywordflow">if</span> (modoCifra == 2) {</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        IV = <a class="code" href="src_2input_8hpp.html#ad1bb2a04e11c6949ecb338223dc82fec">lerIV</a>();</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    }</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160; </div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot;\n1 - Encriptar\n2 - Decriptar\nEscolha a operação: &quot;</span>;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    cin &gt;&gt; operacao;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot;\n1 - Passo a passo\n2 - Apenas resposta\nEscolha a forma de saída: &quot;</span>;</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    cin &gt;&gt; mostrarPasso;</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <a class="code" href="src_2utils_8hpp.html#a4c81ce717a1cb4424918e04a38ca83ec">imprimir</a> = mostrarPasso&amp;1;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160; </div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <span class="keywordtype">string</span> resultado;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <span class="keywordflow">if</span> (modoCifra == 1) {</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        <span class="keywordflow">if</span> (operacao == 1)</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;            resultado = <a class="code" href="src_2modes_8hpp.html#a60434abc68ab236036eb3798130ea264">ECB_encripta</a>(mensagem, chave);</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;            resultado = <a class="code" href="src_2modes_8hpp.html#ac0fb70c775e9b01e69c36a0171ac49ab">ECB_decripta</a>(mensagem, chave);</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        <span class="keywordflow">if</span> (operacao == 1)</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;            resultado = <a class="code" href="src_2modes_8hpp.html#ad25fa5746a25d385f4832f202ded5a1f">CBC_encripta</a>(mensagem, chave, IV);</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;            resultado = <a class="code" href="src_2modes_8hpp.html#a563c30935c912770fcfa72b9184ef76e">CBC_decripta</a>(mensagem, chave, IV);</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    }</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160; </div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot;\n====================== Resultado Final =========================\n\n&quot;</span>;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot;   =&gt; &quot;</span> &lt;&lt; resultado &lt;&lt; endl;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot;\n===============================================================\n&quot;</span>;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;}</div>
+<div class="ttc" id="asrc_2encrypt_8hpp_html_a406830071699a6b9a7e9d78dc0f2912a"><div class="ttname"><a href="src_2encrypt_8hpp.html#a406830071699a6b9a7e9d78dc0f2912a">decriptacao</a></div><div class="ttdeci">int decriptacao(int n, int k)</div><div class="ttdoc">Função conveniente para decriptação.</div><div class="ttdef"><b>Definition:</b> encrypt.hpp:65</div></div>
+<div class="ttc" id="asrc_2encrypt_8hpp_html_ad38abf9d210999233910b38698fe6edc"><div class="ttname"><a href="src_2encrypt_8hpp.html#ad38abf9d210999233910b38698fe6edc">encriptacao</a></div><div class="ttdeci">int encriptacao(int n, int k)</div><div class="ttdoc">Realiza a encriptação de um bloco de 8 bits usando S-DES.</div><div class="ttdef"><b>Definition:</b> encrypt.hpp:39</div></div>
+<div class="ttc" id="asrc_2input_8hpp_html_a66bfdec4f185d4513e25f8090efdfbe6"><div class="ttname"><a href="src_2input_8hpp.html#a66bfdec4f185d4513e25f8090efdfbe6">lerBloco</a></div><div class="ttdeci">int lerBloco()</div><div class="ttdoc">Solicita ao usuário um bloco de 8 bits.</div><div class="ttdef"><b>Definition:</b> input.hpp:61</div></div>
+<div class="ttc" id="asrc_2input_8hpp_html_a6c72d425b520788db5dc240569fab497"><div class="ttname"><a href="src_2input_8hpp.html#a6c72d425b520788db5dc240569fab497">lerMenssagem</a></div><div class="ttdeci">vector&lt; string &gt; lerMenssagem()</div><div class="ttdoc">Solicita mensagem com tamanho múltiplo de 8 bits.</div><div class="ttdef"><b>Definition:</b> input.hpp:88</div></div>
+<div class="ttc" id="asrc_2input_8hpp_html_a6ff5f340adbe5aca5d8ead9bb809ec2c"><div class="ttname"><a href="src_2input_8hpp.html#a6ff5f340adbe5aca5d8ead9bb809ec2c">lerChave</a></div><div class="ttdeci">int lerChave()</div><div class="ttdef"><b>Definition:</b> input.hpp:34</div></div>
+<div class="ttc" id="asrc_2input_8hpp_html_a8ec3d19c3db18b2b8bdbc55e5e6d34e5"><div class="ttname"><a href="src_2input_8hpp.html#a8ec3d19c3db18b2b8bdbc55e5e6d34e5">testarGeracaoDeChave</a></div><div class="ttdeci">void testarGeracaoDeChave()</div><div class="ttdoc">Teste completo de geração de subchaves.</div><div class="ttdef"><b>Definition:</b> input.hpp:140</div></div>
+<div class="ttc" id="asrc_2input_8hpp_html_a9768e856d01f2135950544866782e1fb"><div class="ttname"><a href="src_2input_8hpp.html#a9768e856d01f2135950544866782e1fb">testarMensagem</a></div><div class="ttdeci">void testarMensagem()</div><div class="ttdoc">Teste completo de mensagem (ECB/CBC)</div><div class="ttdef"><b>Definition:</b> input.hpp:191</div></div>
+<div class="ttc" id="asrc_2input_8hpp_html_aa0b0fc2df0b88024b11da4154b3553cd"><div class="ttname"><a href="src_2input_8hpp.html#aa0b0fc2df0b88024b11da4154b3553cd">testarBloco</a></div><div class="ttdeci">void testarBloco()</div><div class="ttdoc">Teste de encriptação/decriptação de bloco único.</div><div class="ttdef"><b>Definition:</b> input.hpp:158</div></div>
+<div class="ttc" id="asrc_2input_8hpp_html_ad1bb2a04e11c6949ecb338223dc82fec"><div class="ttname"><a href="src_2input_8hpp.html#ad1bb2a04e11c6949ecb338223dc82fec">lerIV</a></div><div class="ttdeci">int lerIV()</div><div class="ttdoc">Solicita Vetor de Inicialização (IV) para CBC.</div><div class="ttdef"><b>Definition:</b> input.hpp:115</div></div>
+<div class="ttc" id="asrc_2keygen_8hpp_html_a493f9b8159e3d597bac6b91145b2afdc"><div class="ttname"><a href="src_2keygen_8hpp.html#a493f9b8159e3d597bac6b91145b2afdc">gerarChaves</a></div><div class="ttdeci">void gerarChaves(int chave, int &amp;k1, int &amp;k2)</div><div class="ttdef"><b>Definition:</b> keygen.hpp:50</div></div>
+<div class="ttc" id="asrc_2modes_8hpp_html_a563c30935c912770fcfa72b9184ef76e"><div class="ttname"><a href="src_2modes_8hpp.html#a563c30935c912770fcfa72b9184ef76e">CBC_decripta</a></div><div class="ttdeci">string CBC_decripta(vector&lt; string &gt; cipherText, int chave, int IV)</div><div class="ttdoc">Decripta texto cifrado usando modo CBC.</div><div class="ttdef"><b>Definition:</b> modes.hpp:90</div></div>
+<div class="ttc" id="asrc_2modes_8hpp_html_a60434abc68ab236036eb3798130ea264"><div class="ttname"><a href="src_2modes_8hpp.html#a60434abc68ab236036eb3798130ea264">ECB_encripta</a></div><div class="ttdeci">string ECB_encripta(vector&lt; string &gt; &amp;plainText, int chave)</div><div class="ttdoc">Encripta plaintext usando o modo ECB (Electronic Codebook)</div><div class="ttdef"><b>Definition:</b> modes.hpp:26</div></div>
+<div class="ttc" id="asrc_2modes_8hpp_html_ac0fb70c775e9b01e69c36a0171ac49ab"><div class="ttname"><a href="src_2modes_8hpp.html#ac0fb70c775e9b01e69c36a0171ac49ab">ECB_decripta</a></div><div class="ttdeci">string ECB_decripta(vector&lt; string &gt; &amp;cipherText, int chave)</div><div class="ttdoc">Decripta texto cifrado usando modo ECB.</div><div class="ttdef"><b>Definition:</b> modes.hpp:43</div></div>
+<div class="ttc" id="asrc_2modes_8hpp_html_ad25fa5746a25d385f4832f202ded5a1f"><div class="ttname"><a href="src_2modes_8hpp.html#ad25fa5746a25d385f4832f202ded5a1f">CBC_encripta</a></div><div class="ttdeci">string CBC_encripta(vector&lt; string &gt; &amp;plainText, int chave, int IV)</div><div class="ttdoc">Encripta texto plano usando modo CBC (Cipher Block Chaining)</div><div class="ttdef"><b>Definition:</b> modes.hpp:65</div></div>
+<div class="ttc" id="asrc_2utils_8hpp_html_a29bdece031c7545c0e1228cb3c236b45"><div class="ttname"><a href="src_2utils_8hpp.html#a29bdece031c7545c0e1228cb3c236b45">toBin</a></div><div class="ttdeci">string toBin(int n, int sz)</div><div class="ttdef"><b>Definition:</b> utils.hpp:36</div></div>
+<div class="ttc" id="asrc_2utils_8hpp_html_a4c81ce717a1cb4424918e04a38ca83ec"><div class="ttname"><a href="src_2utils_8hpp.html#a4c81ce717a1cb4424918e04a38ca83ec">imprimir</a></div><div class="ttdeci">bool imprimir</div><div class="ttdoc">Flag para controle de impressão passo a passo (true = ativa saída detalhada)</div><div class="ttdef"><b>Definition:</b> utils.hpp:19</div></div>
+<div class="ttc" id="asrc_2utils_8hpp_html_a7e521b386959ddade896873fafeeb7a1"><div class="ttname"><a href="src_2utils_8hpp.html#a7e521b386959ddade896873fafeeb7a1">separaMensagem</a></div><div class="ttdeci">vector&lt; string &gt; separaMensagem(string &amp;mensagem)</div><div class="ttdef"><b>Definition:</b> utils.hpp:72</div></div>
+<div class="ttc" id="asrc_2utils_8hpp_html_ae6a7d3a9943391ca6b86a7edfb5ea650"><div class="ttname"><a href="src_2utils_8hpp.html#ae6a7d3a9943391ca6b86a7edfb5ea650">toInt</a></div><div class="ttdeci">int toInt(string bits, int sz)</div><div class="ttdef"><b>Definition:</b> utils.hpp:54</div></div>
+<div class="ttc" id="asrc__imprimir_2modes_8hpp_html"><div class="ttname"><a href="src__imprimir_2modes_8hpp.html">modes.hpp</a></div><div class="ttdoc">Implementações dos modos ECB e CBC com suporte a debug.</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

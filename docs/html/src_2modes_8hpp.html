@@ -1,0 +1,413 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>S-DES: Referência do Arquivo src/modes.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">S-DES
+   </div>
+   <div id="projectbrief">Implementação do algoritmo S-DES</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Busca','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funções</a>  </div>
+  <div class="headertitle">
+<div class="title">Referência do Arquivo modes.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Implementação dos modos de operação ECB e CBC para o S-DES.  
+<a href="#details">Mais...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="src_2encrypt_8hpp_source.html">encrypt.hpp</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Gráfico de dependência de inclusões para modes.hpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="src_2modes_8hpp__incl.png" border="0" usemap="#asrc_2modes_8hpp" alt=""/></div>
+<map name="asrc_2modes_8hpp" id="asrc_2modes_8hpp">
+<area shape="rect" title="Implementação dos modos de operação ECB e CBC para o S&#45;DES." alt="" coords="83,5,200,32"/>
+<area shape="rect" href="src_2encrypt_8hpp.html" title="Implementação das funções de encriptação e decriptação do algoritmo S&#45;DES." alt="" coords="92,80,191,107"/>
+<area shape="rect" href="src_2ffunction_8hpp.html" title="Implementação das funções de permutação, S&#45;Box e rede de Feistel para o S&#45;DES." alt="" coords="88,155,195,181"/>
+<area shape="rect" href="src_2keygen_8hpp.html" title=" " alt="" coords="93,229,190,256"/>
+<area shape="rect" href="src_2permutation_8hpp.html" title=" " alt="" coords="76,304,207,331"/>
+<area shape="rect" href="src_2utils_8hpp.html" title="Utilitários para manipulação de bits, conversões e processamento de mensagens para o algoritmo S&#45;DES." alt="" coords="102,379,181,405"/>
+<area shape="rect" title=" " alt="" coords="5,453,85,480"/>
+<area shape="rect" title=" " alt="" coords="110,453,173,480"/>
+<area shape="rect" title=" " alt="" coords="197,453,256,480"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Este grafo mostra quais arquivos estão direta ou indiretamente relacionados com esse arquivo:</div>
+<div class="dyncontent">
+<div class="center"><img src="src_2modes_8hpp__dep__incl.png" border="0" usemap="#asrc_2modes_8hppdep" alt=""/></div>
+<map name="asrc_2modes_8hppdep" id="asrc_2modes_8hppdep">
+<area shape="rect" title="Implementação dos modos de operação ECB e CBC para o S&#45;DES." alt="" coords="5,5,123,32"/>
+<area shape="rect" href="src_2input_8hpp.html" title="Menus interativos para teste do algoritmo S&#45;DES." alt="" coords="11,80,117,107"/>
+<area shape="rect" href="sdes_8cpp.html" title=" " alt="" coords="13,155,115,181"/>
+</map>
+</div>
+</div>
+<p><a href="src_2modes_8hpp_source.html">Vá para o código-fonte desse arquivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funções</h2></td></tr>
+<tr class="memitem:a60434abc68ab236036eb3798130ea264"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="src_2modes_8hpp.html#a60434abc68ab236036eb3798130ea264">ECB_encripta</a> (vector&lt; string &gt; &amp;plainText, int chave)</td></tr>
+<tr class="memdesc:a60434abc68ab236036eb3798130ea264"><td class="mdescLeft">&#160;</td><td class="mdescRight">Encripta plaintext usando o modo ECB (Electronic Codebook)  <a href="src_2modes_8hpp.html#a60434abc68ab236036eb3798130ea264">Mais...</a><br /></td></tr>
+<tr class="separator:a60434abc68ab236036eb3798130ea264"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0fb70c775e9b01e69c36a0171ac49ab"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="src_2modes_8hpp.html#ac0fb70c775e9b01e69c36a0171ac49ab">ECB_decripta</a> (vector&lt; string &gt; &amp;cipherText, int chave)</td></tr>
+<tr class="memdesc:ac0fb70c775e9b01e69c36a0171ac49ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decripta texto cifrado usando modo ECB.  <a href="src_2modes_8hpp.html#ac0fb70c775e9b01e69c36a0171ac49ab">Mais...</a><br /></td></tr>
+<tr class="separator:ac0fb70c775e9b01e69c36a0171ac49ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad25fa5746a25d385f4832f202ded5a1f"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="src_2modes_8hpp.html#ad25fa5746a25d385f4832f202ded5a1f">CBC_encripta</a> (vector&lt; string &gt; &amp;plainText, int chave, int IV)</td></tr>
+<tr class="memdesc:ad25fa5746a25d385f4832f202ded5a1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Encripta texto plano usando modo CBC (Cipher Block Chaining)  <a href="src_2modes_8hpp.html#ad25fa5746a25d385f4832f202ded5a1f">Mais...</a><br /></td></tr>
+<tr class="separator:ad25fa5746a25d385f4832f202ded5a1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a563c30935c912770fcfa72b9184ef76e"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="src_2modes_8hpp.html#a563c30935c912770fcfa72b9184ef76e">CBC_decripta</a> (vector&lt; string &gt; cipherText, int chave, int IV)</td></tr>
+<tr class="memdesc:a563c30935c912770fcfa72b9184ef76e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decripta texto cifrado usando modo CBC.  <a href="src_2modes_8hpp.html#a563c30935c912770fcfa72b9184ef76e">Mais...</a><br /></td></tr>
+<tr class="separator:a563c30935c912770fcfa72b9184ef76e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descrição detalhada</h2>
+<div class="textblock"><p>Implementação dos modos de operação ECB e CBC para o S-DES. </p>
+<dl class="section author"><dt>Autor</dt><dd>Iasmim Freitas </dd>
+<dd>
+Lucas Hashimoto </dd></dl>
+<dl class="section date"><dt>Data</dt><dd>2025-05 </dd></dl>
+</div><h2 class="groupheader">Funções</h2>
+<a id="a563c30935c912770fcfa72b9184ef76e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a563c30935c912770fcfa72b9184ef76e">&#9670;&nbsp;</a></span>CBC_decripta()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string CBC_decripta </td>
+          <td>(</td>
+          <td class="paramtype">vector&lt; string &gt;&#160;</td>
+          <td class="paramname"><em>cipherText</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>chave</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>IV</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Decripta texto cifrado usando modo CBC. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cipherText</td><td>Vetor de strings binárias (blocos cifrados de 8 bits) </td></tr>
+    <tr><td class="paramname">chave</td><td>Chave mestra de 10 bits usada na encriptação </td></tr>
+    <tr><td class="paramname">IV</td><td>Mesmo vetor de inicialização usado na encriptação </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>string Texto plano reconstruído</dd></dl>
+<dl class="section warning"><dt>Aviso</dt><dd>O IV deve ser o mesmo usado na encriptação </dd></dl>
+<dl class="section note"><dt>Observação</dt><dd>Processo:<ol type="1">
+<li>Adiciona IV no início do fluxo</li>
+<li>Processa blocos em ordem reversa</li>
+<li>Aplica XOR com bloco anterior cifrado </li>
+</ol>
+</dd></dl>
+<div class="dynheader">
+Este é o diagrama das funções utilizadas por essa função:</div>
+<div class="dyncontent">
+<div class="center"><img src="src_2modes_8hpp_a563c30935c912770fcfa72b9184ef76e_cgraph.png" border="0" usemap="#asrc_2modes_8hpp_a563c30935c912770fcfa72b9184ef76e_cgraph" alt=""/></div>
+<map name="asrc_2modes_8hpp_a563c30935c912770fcfa72b9184ef76e_cgraph" id="asrc_2modes_8hpp_a563c30935c912770fcfa72b9184ef76e_cgraph">
+<area shape="rect" title="Decripta texto cifrado usando modo CBC." alt="" coords="5,157,115,184"/>
+<area shape="rect" href="src_2encrypt_8hpp.html#a406830071699a6b9a7e9d78dc0f2912a" title="Função conveniente para decriptação." alt="" coords="163,107,261,133"/>
+<area shape="rect" href="src_2utils_8hpp.html#a29bdece031c7545c0e1228cb3c236b45" title=" " alt="" coords="184,157,240,184"/>
+<area shape="rect" href="src_2utils_8hpp.html#ae6a7d3a9943391ca6b86a7edfb5ea650" title=" " alt="" coords="186,208,238,235"/>
+<area shape="rect" href="src_2encrypt_8hpp.html#ad38abf9d210999233910b38698fe6edc" title="Realiza a encriptação de um bloco de 8 bits usando S&#45;DES." alt="" coords="309,107,408,133"/>
+<area shape="rect" href="src_2ffunction_8hpp.html#ac2bd13e6b0b85c624bad5bcaf7eed2da" title=" " alt="" coords="479,5,537,32"/>
+<area shape="rect" href="src_2ffunction_8hpp.html#acb1ac1862e56297cc8569d316ee782f3" title="Rede de Feistel completa (2 rodadas) para encriptação/decriptação." alt="" coords="477,56,539,83"/>
+<area shape="rect" href="src_2keygen_8hpp.html#a493f9b8159e3d597bac6b91145b2afdc" title=" " alt="" coords="456,107,560,133"/>
+<area shape="rect" href="src_2ffunction_8hpp.html#a4fc5bb1f95458cfb96ee7621e54cc1d7" title="Aplica a permutação inversa (IP⁻¹) em um bloco de 8 bits." alt="" coords="825,119,956,145"/>
+<area shape="rect" href="src_2ffunction_8hpp.html#aa42438a26d01098dc44d9a90ceb0b7fb" title="Aplica a permutação inicial (IP) em um bloco de 8 bits." alt="" coords="623,208,762,235"/>
+<area shape="rect" href="src_2ffunction_8hpp.html#ac5bfbbcbd49b622acb9458ec931456ff" title="Etapa individual da rede de Feistel (F + XOR)." alt="" coords="673,5,712,32"/>
+<area shape="rect" href="src_2ffunction_8hpp.html#a70c963b1dcbab5fac915653f057da5b9" title="Função F (Expansão + S&#45;Box + Permutação) do S&#45;DES." alt="" coords="871,5,910,32"/>
+<area shape="rect" href="src_2permutation_8hpp.html#ae48b97ba0911dace5bc144be81b339fa" title="Aplica uma permutação em um número inteiro usando uma tabela específica." alt="" coords="1004,81,1081,108"/>
+<area shape="rect" href="src_2ffunction_8hpp.html#a55ab14574140bf9c9646bc4b64a25b4e" title=" " alt="" coords="1013,5,1073,32"/>
+<area shape="rect" href="src_2keygen_8hpp.html#a227d6ed50aaac9b21bf83806aa3ffab0" title=" " alt="" coords="608,107,777,133"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad25fa5746a25d385f4832f202ded5a1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad25fa5746a25d385f4832f202ded5a1f">&#9670;&nbsp;</a></span>CBC_encripta()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string CBC_encripta </td>
+          <td>(</td>
+          <td class="paramtype">vector&lt; string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>plainText</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>chave</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>IV</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Encripta texto plano usando modo CBC (Cipher Block Chaining) </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">plainText</td><td>Vetor de strings binárias (blocos de 8 bits) </td></tr>
+    <tr><td class="paramname">chave</td><td>Chave mestra de 10 bits (0-1023) </td></tr>
+    <tr><td class="paramname">IV</td><td>Vetor de inicialização (8 bits) para o primeiro bloco </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>string Texto cifrado concatenado</dd></dl>
+<dl class="section pre"><dt>Pré-condição</dt><dd>IV deve ser valor de 8 bits (0-255) </dd></dl>
+<dl class="section note"><dt>Observação</dt><dd>Características do CBC:<ul>
+<li>Blocos idênticos produzem saídas diferentes</li>
+<li>Propagação de erros entre blocos</li>
+<li>Requer IV único por encriptação </li>
+</ul>
+</dd></dl>
+<div class="dynheader">
+Este é o diagrama das funções utilizadas por essa função:</div>
+<div class="dyncontent">
+<div class="center"><img src="src_2modes_8hpp_ad25fa5746a25d385f4832f202ded5a1f_cgraph.png" border="0" usemap="#asrc_2modes_8hpp_ad25fa5746a25d385f4832f202ded5a1f_cgraph" alt=""/></div>
+<map name="asrc_2modes_8hpp_ad25fa5746a25d385f4832f202ded5a1f_cgraph" id="asrc_2modes_8hpp_ad25fa5746a25d385f4832f202ded5a1f_cgraph">
+<area shape="rect" title="Encripta texto plano usando modo CBC (Cipher Block Chaining)" alt="" coords="5,157,115,184"/>
+<area shape="rect" href="src_2encrypt_8hpp.html#ad38abf9d210999233910b38698fe6edc" title="Realiza a encriptação de um bloco de 8 bits usando S&#45;DES." alt="" coords="163,107,261,133"/>
+<area shape="rect" href="src_2utils_8hpp.html#a29bdece031c7545c0e1228cb3c236b45" title=" " alt="" coords="184,157,240,184"/>
+<area shape="rect" href="src_2utils_8hpp.html#ae6a7d3a9943391ca6b86a7edfb5ea650" title=" " alt="" coords="186,208,238,235"/>
+<area shape="rect" href="src_2ffunction_8hpp.html#ac2bd13e6b0b85c624bad5bcaf7eed2da" title=" " alt="" coords="332,5,391,32"/>
+<area shape="rect" href="src_2ffunction_8hpp.html#acb1ac1862e56297cc8569d316ee782f3" title="Rede de Feistel completa (2 rodadas) para encriptação/decriptação." alt="" coords="330,56,393,83"/>
+<area shape="rect" href="src_2keygen_8hpp.html#a493f9b8159e3d597bac6b91145b2afdc" title=" " alt="" coords="309,107,413,133"/>
+<area shape="rect" href="src_2ffunction_8hpp.html#a4fc5bb1f95458cfb96ee7621e54cc1d7" title="Aplica a permutação inversa (IP⁻¹) em um bloco de 8 bits." alt="" coords="679,119,809,145"/>
+<area shape="rect" href="src_2ffunction_8hpp.html#aa42438a26d01098dc44d9a90ceb0b7fb" title="Aplica a permutação inicial (IP) em um bloco de 8 bits." alt="" coords="477,208,615,235"/>
+<area shape="rect" href="src_2ffunction_8hpp.html#ac5bfbbcbd49b622acb9458ec931456ff" title="Etapa individual da rede de Feistel (F + XOR)." alt="" coords="527,5,565,32"/>
+<area shape="rect" href="src_2ffunction_8hpp.html#a70c963b1dcbab5fac915653f057da5b9" title="Função F (Expansão + S&#45;Box + Permutação) do S&#45;DES." alt="" coords="725,5,763,32"/>
+<area shape="rect" href="src_2permutation_8hpp.html#ae48b97ba0911dace5bc144be81b339fa" title="Aplica uma permutação em um número inteiro usando uma tabela específica." alt="" coords="857,81,935,108"/>
+<area shape="rect" href="src_2ffunction_8hpp.html#a55ab14574140bf9c9646bc4b64a25b4e" title=" " alt="" coords="866,5,926,32"/>
+<area shape="rect" href="src_2keygen_8hpp.html#a227d6ed50aaac9b21bf83806aa3ffab0" title=" " alt="" coords="461,107,631,133"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac0fb70c775e9b01e69c36a0171ac49ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0fb70c775e9b01e69c36a0171ac49ab">&#9670;&nbsp;</a></span>ECB_decripta()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string ECB_decripta </td>
+          <td>(</td>
+          <td class="paramtype">vector&lt; string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>cipherText</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>chave</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Decripta texto cifrado usando modo ECB. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cipherText</td><td>Vetor de strings binárias (blocos cifrados de 8 bits) </td></tr>
+    <tr><td class="paramname">chave</td><td>Chave mestra de 10 bits usada na encriptação </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>string Texto plano reconstruído</dd></dl>
+<dl class="section see"><dt>Veja também</dt><dd><a class="el" href="src_2modes_8hpp.html#a60434abc68ab236036eb3798130ea264" title="Encripta plaintext usando o modo ECB (Electronic Codebook)">ECB_encripta()</a> para pré-condições </dd></dl>
+<div class="dynheader">
+Este é o diagrama das funções utilizadas por essa função:</div>
+<div class="dyncontent">
+<div class="center"><img src="src_2modes_8hpp_ac0fb70c775e9b01e69c36a0171ac49ab_cgraph.png" border="0" usemap="#asrc_2modes_8hpp_ac0fb70c775e9b01e69c36a0171ac49ab_cgraph" alt=""/></div>
+<map name="asrc_2modes_8hpp_ac0fb70c775e9b01e69c36a0171ac49ab_cgraph" id="asrc_2modes_8hpp_ac0fb70c775e9b01e69c36a0171ac49ab_cgraph">
+<area shape="rect" title="Decripta texto cifrado usando modo ECB." alt="" coords="5,157,113,184"/>
+<area shape="rect" href="src_2encrypt_8hpp.html#a406830071699a6b9a7e9d78dc0f2912a" title="Função conveniente para decriptação." alt="" coords="161,107,260,133"/>
+<area shape="rect" href="src_2utils_8hpp.html#a29bdece031c7545c0e1228cb3c236b45" title=" " alt="" coords="183,157,239,184"/>
+<area shape="rect" href="src_2utils_8hpp.html#ae6a7d3a9943391ca6b86a7edfb5ea650" title=" " alt="" coords="185,208,237,235"/>
+<area shape="rect" href="src_2encrypt_8hpp.html#ad38abf9d210999233910b38698fe6edc" title="Realiza a encriptação de um bloco de 8 bits usando S&#45;DES." alt="" coords="308,107,407,133"/>
+<area shape="rect" href="src_2ffunction_8hpp.html#ac2bd13e6b0b85c624bad5bcaf7eed2da" title=" " alt="" coords="477,5,536,32"/>
+<area shape="rect" href="src_2ffunction_8hpp.html#acb1ac1862e56297cc8569d316ee782f3" title="Rede de Feistel completa (2 rodadas) para encriptação/decriptação." alt="" coords="475,56,538,83"/>
+<area shape="rect" href="src_2keygen_8hpp.html#a493f9b8159e3d597bac6b91145b2afdc" title=" " alt="" coords="455,107,559,133"/>
+<area shape="rect" href="src_2ffunction_8hpp.html#a4fc5bb1f95458cfb96ee7621e54cc1d7" title="Aplica a permutação inversa (IP⁻¹) em um bloco de 8 bits." alt="" coords="824,119,955,145"/>
+<area shape="rect" href="src_2ffunction_8hpp.html#aa42438a26d01098dc44d9a90ceb0b7fb" title="Aplica a permutação inicial (IP) em um bloco de 8 bits." alt="" coords="622,208,761,235"/>
+<area shape="rect" href="src_2ffunction_8hpp.html#ac5bfbbcbd49b622acb9458ec931456ff" title="Etapa individual da rede de Feistel (F + XOR)." alt="" coords="672,5,711,32"/>
+<area shape="rect" href="src_2ffunction_8hpp.html#a70c963b1dcbab5fac915653f057da5b9" title="Função F (Expansão + S&#45;Box + Permutação) do S&#45;DES." alt="" coords="870,5,909,32"/>
+<area shape="rect" href="src_2permutation_8hpp.html#ae48b97ba0911dace5bc144be81b339fa" title="Aplica uma permutação em um número inteiro usando uma tabela específica." alt="" coords="1003,81,1080,108"/>
+<area shape="rect" href="src_2ffunction_8hpp.html#a55ab14574140bf9c9646bc4b64a25b4e" title=" " alt="" coords="1011,5,1071,32"/>
+<area shape="rect" href="src_2keygen_8hpp.html#a227d6ed50aaac9b21bf83806aa3ffab0" title=" " alt="" coords="607,107,776,133"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a60434abc68ab236036eb3798130ea264"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60434abc68ab236036eb3798130ea264">&#9670;&nbsp;</a></span>ECB_encripta()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string ECB_encripta </td>
+          <td>(</td>
+          <td class="paramtype">vector&lt; string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>plainText</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>chave</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Encripta plaintext usando o modo ECB (Electronic Codebook) </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">plainText</td><td>Vetor de strings binárias (blocos de 8 bits) </td></tr>
+    <tr><td class="paramname">chave</td><td>Chave mestra de 10 bits (0-1023) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>string Texto cifrado concatenado</dd></dl>
+<dl class="section pre"><dt>Pré-condição</dt><dd>Cada string em plainText deve ter tamanho 8 e conter apenas '0's e '1's </dd>
+<dd>
+chave deve ser um valor de 10 bits válido </dd></dl>
+<dl class="section post"><dt>Pós-condição</dt><dd>O resultado terá tamanho plainText.size() * 8</dd></dl>
+<dl class="section note"><dt>Observação</dt><dd>Características do ECB:<ul>
+<li>Blocos idênticos produzem saídas idênticas</li>
+<li>Não usa vetor de inicialização (IV)</li>
+<li>Paralelizável </li>
+</ul>
+</dd></dl>
+<div class="dynheader">
+Este é o diagrama das funções utilizadas por essa função:</div>
+<div class="dyncontent">
+<div class="center"><img src="src_2modes_8hpp_a60434abc68ab236036eb3798130ea264_cgraph.png" border="0" usemap="#asrc_2modes_8hpp_a60434abc68ab236036eb3798130ea264_cgraph" alt=""/></div>
+<map name="asrc_2modes_8hpp_a60434abc68ab236036eb3798130ea264_cgraph" id="asrc_2modes_8hpp_a60434abc68ab236036eb3798130ea264_cgraph">
+<area shape="rect" title="Encripta plaintext usando o modo ECB (Electronic Codebook)" alt="" coords="5,157,113,184"/>
+<area shape="rect" href="src_2encrypt_8hpp.html#ad38abf9d210999233910b38698fe6edc" title="Realiza a encriptação de um bloco de 8 bits usando S&#45;DES." alt="" coords="161,107,260,133"/>
+<area shape="rect" href="src_2utils_8hpp.html#a29bdece031c7545c0e1228cb3c236b45" title=" " alt="" coords="183,157,239,184"/>
+<area shape="rect" href="src_2utils_8hpp.html#ae6a7d3a9943391ca6b86a7edfb5ea650" title=" " alt="" coords="185,208,237,235"/>
+<area shape="rect" href="src_2ffunction_8hpp.html#ac2bd13e6b0b85c624bad5bcaf7eed2da" title=" " alt="" coords="331,5,389,32"/>
+<area shape="rect" href="src_2ffunction_8hpp.html#acb1ac1862e56297cc8569d316ee782f3" title="Rede de Feistel completa (2 rodadas) para encriptação/decriptação." alt="" coords="329,56,391,83"/>
+<area shape="rect" href="src_2keygen_8hpp.html#a493f9b8159e3d597bac6b91145b2afdc" title=" " alt="" coords="308,107,412,133"/>
+<area shape="rect" href="src_2ffunction_8hpp.html#a4fc5bb1f95458cfb96ee7621e54cc1d7" title="Aplica a permutação inversa (IP⁻¹) em um bloco de 8 bits." alt="" coords="677,119,808,145"/>
+<area shape="rect" href="src_2ffunction_8hpp.html#aa42438a26d01098dc44d9a90ceb0b7fb" title="Aplica a permutação inicial (IP) em um bloco de 8 bits." alt="" coords="475,208,614,235"/>
+<area shape="rect" href="src_2ffunction_8hpp.html#ac5bfbbcbd49b622acb9458ec931456ff" title="Etapa individual da rede de Feistel (F + XOR)." alt="" coords="525,5,564,32"/>
+<area shape="rect" href="src_2ffunction_8hpp.html#a70c963b1dcbab5fac915653f057da5b9" title="Função F (Expansão + S&#45;Box + Permutação) do S&#45;DES." alt="" coords="723,5,762,32"/>
+<area shape="rect" href="src_2permutation_8hpp.html#ae48b97ba0911dace5bc144be81b339fa" title="Aplica uma permutação em um número inteiro usando uma tabela específica." alt="" coords="856,81,933,108"/>
+<area shape="rect" href="src_2ffunction_8hpp.html#a55ab14574140bf9c9646bc4b64a25b4e" title=" " alt="" coords="865,5,925,32"/>
+<area shape="rect" href="src_2keygen_8hpp.html#a227d6ed50aaac9b21bf83806aa3ffab0" title=" " alt="" coords="460,107,629,133"/>
+</map>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>
