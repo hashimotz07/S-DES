@@ -26,7 +26,7 @@ vector<vector<int>> s1 = {
     {2, 0, 1, 3},
     {3, 0, 1, 0},
     {2, 1, 0, 3}
-};                                                  ///< Matriz S-Box 1 (4 bits -> 2 bits).
+};                                                  ///< Matriz S-Box 1 (4 bits -> 2 bits).{}
 
 
 /**

@@ -14,9 +14,13 @@
  * @brief Imprime cabeçalho formatado para os modos ECB/CBC
  * @debug Exibe estrutura visual da operação por bloco, de acordo com o modo e tipo
  */
-void imprimirCabecalho(string tipo, string modo, string chave, string IV=""){
+void imprimirCabecalho(vector<string>& mensagem, string tipo, string modo, string chave, string IV=""){
     cout << "\n======================= Modo " << modo << " ========================\n\n";
     cout << "Operação: " << tipo << "\n";
+    if(tipo == "Encriptação") cout << "Plaintext: ";
+    else cout << "Ciphertext: ";
+    for(string bloco : mensagem) cout << bloco << " ";
+    cout << endl;
     cout << "Chave usada: " << chave << endl;
     if(modo == "ECB"){
             cout << "\n---------------------------------------------------------\n";
@@ -32,9 +36,9 @@ void imprimirCabecalho(string tipo, string modo, string chave, string IV=""){
             cout << "---------------------------------------------------------------------\n";
         }
         else{ 
-            cout << "\n-----------------------------------------------------------------\n";
-            cout << "| Bloco # | Decifrado S-DES | XOR com IV/prev | Saída plaintext |\n";
-            cout << "-----------------------------------------------------------------\n";
+            cout << "\n----------------------------------------------------------------------------\n";
+            cout << "| Bloco # | Entrada  | Decifrado S-DES | XOR com IV/prev | Saída plaintext |\n";
+            cout << "----------------------------------------------------------------------------\n";
         }
     }
 }
@@ -47,7 +51,7 @@ void imprimirCabecalho(string tipo, string modo, string chave, string IV=""){
 string ECB_encripta(vector<string>& plainText, int chave){
     bool imprimiLocal=imprimir; 
     imprimir=false;
-    if(imprimiLocal) imprimirCabecalho("Encriptação", "ECB", toBin(chave, 10));
+    if(imprimiLocal) imprimirCabecalho(plainText, "Encriptação", "ECB", toBin(chave, 10));
     string cipherText="";
     int i=1;
     for(string blocoS : plainText){
@@ -70,7 +74,7 @@ string ECB_encripta(vector<string>& plainText, int chave){
 string ECB_decripta(vector<string>& cipherText, int chave){
     bool imprimiLocal = imprimir;
     imprimir = false;
-    if(imprimiLocal) imprimirCabecalho("Decriptação", "ECB", toBin(chave, 10));
+    if(imprimiLocal) imprimirCabecalho(cipherText, "Decriptação", "ECB", toBin(chave, 10));
     string plainText="";
     int i=1;
     for(string blocoS : cipherText){
@@ -91,7 +95,7 @@ string ECB_decripta(vector<string>& cipherText, int chave){
 string CBC_encripta(vector<string>& plainText, int chave, int IV){
     bool imprimiLocal = imprimir;
     imprimir = false;
-    if(imprimiLocal) imprimirCabecalho("Encriptação", "CBC", toBin(chave, 10), toBin(IV, 8));
+    if(imprimiLocal) imprimirCabecalho(plainText, "Encriptação", "CBC", toBin(chave, 10), toBin(IV, 8));
     string cipherText="";
     int last=IV, i=1;
     for(string blocoS : plainText){
@@ -113,16 +117,16 @@ string CBC_encripta(vector<string>& plainText, int chave, int IV){
 string CBC_decripta(vector<string> cipherText, int chave, int IV){
     bool imprimiLocal = imprimir;
     imprimir = false;
-    if(imprimiLocal) imprimirCabecalho("Decriptação", "CBC", toBin(chave, 10), toBin(IV, 8));
-    cipherText.insert(cipherText.begin(), toBin(IV, 8));
+    if(imprimiLocal) imprimirCabecalho(cipherText, "Decriptação", "CBC", toBin(chave, 10), toBin(IV, 8));
     int last, atual, bloco;
     string plainText="";
-    last = toInt(cipherText[0], 8);
-    for(int i=1; i < (int)cipherText.size(); i++){
-        if(imprimiLocal) cout << "|   " << i << "     |    " << cipherText[i] << "     |  ⊕ " << toBin(last, 8);
+    last = IV;
+    for(int i=0; i < (int)cipherText.size(); i++){
         atual = toInt(cipherText[i], 8);
-        bloco = decriptacao(atual, chave) ^ last;
-        atual = last;
+        bloco = decriptacao(atual, chave);
+        if(imprimiLocal) cout << "|   " << i+1 << "     | " << cipherText[i] << " |    " << toBin(bloco, 8) << "     |  ⊕ " << toBin(last, 8);
+        bloco ^= last;
+        last = atual;
         if(imprimiLocal) cout << "     |     " << toBin(bloco, 8) << "    |\n";
         plainText += toBin(bloco, 8) + " ";
     }

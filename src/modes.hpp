@@ -83,24 +83,20 @@ string CBC_encripta(vector<string>& plainText, int chave, int IV){
  * 
  * @warning O IV deve ser o mesmo usado na encriptação
  * @note Processo:
- * 1. Adiciona IV no início do fluxo
- * 2. Processa blocos em ordem reversa
- * 3. Aplica XOR com bloco anterior cifrado
+ * 1. Salva o bloco atual na variavel atual
+ * 2. Decripta o bloco atual
+ * 3. Aplica XOR com bloco anterior cifrado (last)
+ * 4. Subtitui last por atual
  */
 string CBC_decripta(vector<string> cipherText, int chave, int IV){
-    cipherText.insert(cipherText.begin(), toBin(IV, 8));
-    int next, atual;
-    vector<int> plainReverso;
-    int i = (int)cipherText.size()-1;
-    atual = toInt(cipherText[i], 8);
-    for(--i ; i >= 0; i--){
-        next = toInt(cipherText[i], 8);
-        atual = decriptacao(atual, chave) ^ next;
-        atual = next;
-    }
+    int last, atual, bloco;
     string plainText="";
-    for(i = (int)plainReverso.size()-1; i >= 0; i--){
-        plainText += toBin(plainReverso[i], 8);
+    last = IV;
+    for(int i=0; i < (int)cipherText.size(); i++){
+        atual = toInt(cipherText[i], 8);
+        bloco = decriptacao(atual, chave) ^ last;
+        last = atual;
+        plainText += toBin(bloco, 8) + " ";
     }
     return plainText;
 } 
