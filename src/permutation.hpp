@@ -1,5 +1,5 @@
 /**
- * @file permutation.cpp
+ * @file permutation.hpp
  * @brief Implementação das tabelas de permutação e função de permutação para o algoritmo S-DES.
  * @author Iasmim Freitas
  * @author Lucas Hashimoto
@@ -15,18 +15,18 @@ vector<int> p4 = {2, 4, 3, 1};                      ///< Tabela P4 (4 bits de sa
 vector<int> ip = {2, 6, 3, 1, 4, 8, 5, 7};          ///< Tabela de Permutação Inicial (IP).
 vector<int> ipi = {4, 1, 3, 5, 7, 2, 8, 6};         ///< Tabela de Permutação Inversa (IP⁻¹).
 vector<int> ep = {4, 1, 2, 3, 2, 3, 4, 1};          ///< Tabela de Expansão (4 bits -> 8 bits).
-vector<vector<int>> s0 = {                           ///< Matriz S-Box 0 (4 bits -> 2 bits).
+vector<vector<int>> s0 = {                           
     {1, 0, 3, 2},
     {3, 2, 1, 0},
     {0, 2, 1, 3},
     {3, 1, 3, 2}
-};
-vector<vector<int>> s1 = {                           ///< Matriz S-Box 1 (4 bits -> 2 bits).
+};                                                  ///< Matriz S-Box 0 (4 bits -> 2 bits).
+vector<vector<int>> s1 = {                           
     {0, 1, 2, 3},
     {2, 0, 1, 3},
     {3, 0, 1, 0},
     {2, 1, 0, 3}
-};
+};                                                  ///< Matriz S-Box 1 (4 bits -> 2 bits).
 
 
 /**

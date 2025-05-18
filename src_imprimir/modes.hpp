@@ -1,6 +1,6 @@
 /**
  * @file modes.hpp
- * @brief Implementações dos modos ECB e CBC com suporte a debug
+ * @brief Versão debug das implementações dos modos ECB e CBC - Para documentação completa, consulte src/modes.hpp
  * @note Esta versão contém:
  * - Cabeçalhos de operação formatados
  * - Logs detalhados para cada bloco, quando `imprimir` está ativado

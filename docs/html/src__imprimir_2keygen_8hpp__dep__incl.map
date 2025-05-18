@@ -1,8 +1,0 @@
-<map id="src_imprimir/keygen.hpp" name="src_imprimir/keygen.hpp">
-<area shape="rect" id="node1" title="Versão debug da geração de chaves &#45; Documentação completa em src/keygen.hpp." alt="" coords="11,5,193,32"/>
-<area shape="rect" id="node2" href="$src__imprimir_2ffunction_8hpp.html" title="Versão debug da função Feistel &#45; Documentação completa em src/ffunction.hpp." alt="" coords="5,80,199,107"/>
-<area shape="rect" id="node3" href="$src__imprimir_2encrypt_8hpp.html" title="Versão com logs de debug &#45; Para documentação completa, consulte src/encrypt.hpp." alt="" coords="9,155,195,181"/>
-<area shape="rect" id="node4" href="$src__imprimir_2modes_8hpp.html" title="Implementações dos modos ECB e CBC com suporte a debug." alt="" coords="12,229,192,256"/>
-<area shape="rect" id="node5" href="$src__imprimir_2input_8hpp.html" title="Entrada interativa para testes de encriptação S&#45;DES com logs." alt="" coords="17,304,187,331"/>
-<area shape="rect" id="node6" href="$main_8cpp.html" title="Interface interativa principal para testes com o algoritmo S&#45;DES." alt="" coords="18,379,186,405"/>
-</map>

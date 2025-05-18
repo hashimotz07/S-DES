@@ -1,8 +1,0 @@
-<map id="feistel" name="feistel">
-<area shape="rect" id="node1" title="Rede Feistel completa (2 rodadas) com logs detalhados @debug Mostra:" alt="" coords="5,56,68,83"/>
-<area shape="rect" id="node2" href="$src_2ffunction_8hpp.html#ac5bfbbcbd49b622acb9458ec931456ff" title="Etapa individual da rede de Feistel (F + XOR)." alt="" coords="125,31,163,57"/>
-<area shape="rect" id="node6" href="$src_2utils_8hpp.html#a29bdece031c7545c0e1228cb3c236b45" title=" " alt="" coords="116,81,172,108"/>
-<area shape="rect" id="node3" href="$src_2ffunction_8hpp.html#a70c963b1dcbab5fac915653f057da5b9" title="Função F (Expansão + S&#45;Box + Permutação) do S&#45;DES." alt="" coords="220,31,259,57"/>
-<area shape="rect" id="node4" href="$src_2permutation_8hpp.html#ae48b97ba0911dace5bc144be81b339fa" title="Aplica uma permutação em um número inteiro usando uma tabela específica." alt="" coords="307,5,384,32"/>
-<area shape="rect" id="node5" href="$src_2ffunction_8hpp.html#a55ab14574140bf9c9646bc4b64a25b4e" title=" " alt="" coords="315,56,375,83"/>
-</map>

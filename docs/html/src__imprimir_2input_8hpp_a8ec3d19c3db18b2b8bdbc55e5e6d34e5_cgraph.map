@@ -1,8 +1,0 @@
-<map id="testarGeracaoDeChave" name="testarGeracaoDeChave">
-<area shape="rect" id="node1" title="Testa geração de subchaves K1 e K2 a partir de uma chave @debug Ativa logs de geração e permutação." alt="" coords="5,81,179,108"/>
-<area shape="rect" id="node2" href="$src_2keygen_8hpp.html#a493f9b8159e3d597bac6b91145b2afdc" title=" " alt="" coords="227,56,331,83"/>
-<area shape="rect" id="node5" href="$src_2input_8hpp.html#a6ff5f340adbe5aca5d8ead9bb809ec2c" title=" " alt="" coords="239,107,319,133"/>
-<area shape="rect" id="node3" href="$src_2keygen_8hpp.html#a227d6ed50aaac9b21bf83806aa3ffab0" title=" " alt="" coords="379,5,548,32"/>
-<area shape="rect" id="node4" href="$src_2permutation_8hpp.html#ae48b97ba0911dace5bc144be81b339fa" title="Aplica uma permutação em um número inteiro usando uma tabela específica." alt="" coords="425,56,502,83"/>
-<area shape="rect" id="node6" href="$src_2utils_8hpp.html#ae6a7d3a9943391ca6b86a7edfb5ea650" title=" " alt="" coords="437,107,489,133"/>
-</map>

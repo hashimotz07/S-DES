@@ -36,10 +36,12 @@ int permutacaoFinal(int n){
  * @return pair<int, int> Par (L, R), onde L = 4 bits MSB, R = 4 bits LSB.
  * @pre n deve ser um valor de 8 bits.
  * @post L e R serão valores de 4 bits cada (0 <= L, R <= 15).
- * @example
+ * 
+ * Exemplo de uso:
+ * @code
  *   dividi(0b11001010) // Retorna (0b1100, 0b1010)
+ * @endcode
  */
-
 pair<int, int> dividi(int n){
     int l = n >> 4;
     int r = n & ((1 << 4) - 1);
@@ -54,8 +56,11 @@ pair<int, int> dividi(int n){
  * @pre n deve ser um valor de 4 bits (0 <= n <= 15).
  * @pre s deve ser uma matriz 4x4 válida.
  * @post O resultado será um valor de 2 bits (0-3).
- * @example
+ * 
+ * Exemplo de uso:
+ * @code
  *   s_box(0b1010, s0) // Retorna 0b10 (linha 2, coluna 1)
+ * @endcode
  */
 int s_box(int n, vector<vector<int>>& s){
     int linha = ((n & 8) >> 2) | (n & 1);

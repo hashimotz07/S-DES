@@ -1,6 +1,6 @@
 /**
  * @file input.hpp
- * @brief Entrada interativa para testes de encriptação S-DES com logs
+ * @brief Entrada interativa para testes de encriptação S-DES com logs - - Para documentação completa, consulte src/input.hpp
  * @note Esta versão recebe entradas com valores padrão e leitura manual
  * @debug Ativa logs de geração de chaves, blocos e mensagens se `imprimir` estiver ativo
  * 

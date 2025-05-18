@@ -27,8 +27,8 @@ bool imprimir=false;
  */
 int encriptar=2;
 
-// converte o numero inteiro para binario(string)
-// Para documentação completa, ver src/utils.hpp
+/// converte o numero inteiro para binario(string); 
+/// Para documentação completa, ver src/utils.hpp
 string toBin(int n, int sz){
     string bits = "";
     for(int i=sz-1; i >= 0; i--){
@@ -37,8 +37,8 @@ string toBin(int n, int sz){
     return bits;
 }
 
-// converte o numero binario(string) para inteiro
-// Para documentação completa, ver src/utils.hpp
+/// converte o numero binario(string) para inteiro; 
+/// Para documentação completa, ver src/utils.hpp
 int toInt(string bits, int sz){
     int num=0;
     for(int i=sz-1, j=0; i >= 0; i--, j++){
@@ -47,8 +47,8 @@ int toInt(string bits, int sz){
     return num;
 }
 
-// separa os blocos de uma mensagem em um vetor
-// retorna uma lista vazia se a mensagem não tiver tamanho multiplo de 8
+/// separa os blocos de uma mensagem em um vetor; 
+/// retorna uma lista vazia se a mensagem não tiver tamanho multiplo de 8
 vector<string> separaMensagem(string& mensagem){
     vector<string> newMensagem;
     string bloco="";

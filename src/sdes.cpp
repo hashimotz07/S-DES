@@ -4,18 +4,6 @@
  * @author Iasmim Freitas
  * @author Lucas Hashimoto
  * @date 2025-05
- * 
- * @mainpage Sistema de Criptografia S-DES
- * 
- * @section intro_sec Introdução
- * Implementação completa do algoritmo S-DES (Simplified Data Encryption Standard)
- * com suporte aos modos de operação ECB e CBC.
- * 
- * @section features_sec Funcionalidades
- * - Geração de subchaves K1 e K2
- * - Encriptação/decriptação de blocos individuais
- * - Processamento de mensagens com modos de operação ECB e CBC
- * - Interface interativa por menus
  */
 #include "input.hpp"
 

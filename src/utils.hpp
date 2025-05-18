@@ -13,16 +13,18 @@
 using namespace std;
 
 /**
- * @var bool imprimir
+ * @var imprimir
  * @brief Flag para controle de impressão passo a passo (true = ativa saída detalhada)
  */
 bool imprimir=false;
 
+
 /**
- * @var int encriptar
+ * @var encriptar
  * @brief Modo de operação (2 = encriptar, 1 = decriptar)
  */
 int encriptar=2;
+
 
 /**
  * @brief Converte um inteiro para sua representação binária em string
@@ -30,8 +32,11 @@ int encriptar=2;
  * @param sz Tamanho (em bits) da saída desejada
  * @return string Representação binária com exatamente 'sz' caracteres ('0' ou '1')
  * @pre sz deve ser maior que 0 e suficiente para representar 'n'
- * @example 
+ * 
+ * Exemplo de uso:
+ * @code
  *   toBin(5, 4) retorna "0101"
+ * @endcode
  */
 string toBin(int n, int sz){
     string bits = "";
@@ -48,8 +53,11 @@ string toBin(int n, int sz){
  * @return int Valor inteiro correspondente
  * @pre bits deve conter apenas '0's e '1's 
  * @pre bits.length() >= sz
- * @example
+ * 
+ * Exemplo de uso:
+ * @code
  *   toInt("0101", 4) retorna 5
+ * @endcode
  */
 int toInt(string bits, int sz){
     int num=0;
@@ -66,8 +74,11 @@ int toInt(string bits, int sz){
  * @return vector<string> Vetor vazio se o comprimento da mensagem não for múltiplo de 8
  * @pre mensagem deve conter apenas '0's e '1's
  * @post Cada elemento do vetor retornado terá tamanho exatamente 8
- * @example
+ * 
+ * Exemplo de uso:
+ * @code
  *   separaMensagem("0101010101010101") retorna ["01010101", "01010101"]
+ * @endcode
  */
 vector<string> separaMensagem(string& mensagem){
     vector<string> newMensagem;

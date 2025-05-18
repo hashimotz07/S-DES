@@ -1,5 +1,5 @@
 /**
- * @file permutations.hpp
+ * @file permutation.hpp
  * @brief Versão debug das tabelas e funções utilitárias - Documentação completa em src/permutation.hpp
  * @note Contém implementações idênticas às origens com adição de logs condicionais
  * @see src/permutation.hpp para documentação completa das funções

@@ -25,11 +25,6 @@
  * - Converte string binária para inteiro
  * 
  * @warning Não valida caracteres inválidos (apenas tamanho)
- * 
- * @example
- *   int chave = lerChave();
- *   // Usuário digita "n" e depois "1110001110"
- *   // Retorna 0b1110001110 (910)
  */
 int lerChave(){
     string chave10 = "1010000010"; // chave padrão

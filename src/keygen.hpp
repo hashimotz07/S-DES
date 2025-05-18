@@ -1,5 +1,5 @@
 /**
- * @file keygen.cpp
+ * @file keygen.hpp
  * @brief Implementação das funções de deslocamento circular e geração de chaves para o algoritmo S-DES.
  * @author Iasmim Freitas
  * @author Lucas Hashimoto
@@ -21,9 +21,11 @@
  * @pre shift > 0 && shift < tamanho
  * @post O resultado terá exatamente 'tamanho' bits (bits extras são truncados).
  * 
- * @example 
+ * Exemplo de uso:
+ * @code
  *   deslocamento_circular(0b10110, 5, 1) // Retorna 0b01101 (rotaciona 1 posição)
  *   deslocamento_circular(0b10110, 5, 2) // Retorna 0b11010 (rotaciona 2 posições)
+ * @endcode
  */
 int deslocamento_circular(int n, int tamanho, int shift){
     return ((n<<shift) | ((n>>(tamanho - shift)) & ((1 << shift)-1))) & ((1<<tamanho)-1);
@@ -43,9 +45,11 @@ int deslocamento_circular(int n, int tamanho, int shift){
  * @pre chave deve ser um valor de 10 bits válido (0 <= chave <= 1023).
  * @post k1 e k2 serão valores de 8 bits (0 <= k1, k2 <= 255).
  * 
- * @example 
+ * Exemplo de uso:
+ * @code
  *   int k1, k2;
  *   gerarChaves(0b1010000010, k1, k2);
+ * @endcode
  */
 void gerarChaves(int chave, int &k1, int &k2){
     // permutacao inicial (P10)
