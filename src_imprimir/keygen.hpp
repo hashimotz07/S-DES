@@ -1,11 +1,27 @@
+/**
+ * @file keygen.hpp
+ * @brief Versão debug da geração de chaves - Documentação completa em src/keygen.hpp
+ * @note Contém logs detalhados de cada etapa do processo
+ * @see src/keygen.hpp para documentação completa das funções
+ */
+
 #include "permutation.hpp"
 
-/*deslocamento circular*/
+/**
+ * @brief Deslocamento circular
+ */
 int deslocamento_circular(int n, int tamanho, int shift){
     return ((n<<shift) | ((n>>(tamanho - shift)) & ((1 << shift)-1))) & ((1<<tamanho)-1);
 }
 
-/*geração de chaves subjacentes*/
+/**
+ * @brief Geração de subchaves com logs detalhados
+ * @debug Mostra todas as etapas do processo quando imprimir=true:
+ * - Permutação P10
+ * - Deslocamentos circulares
+ * - Permutações P8
+ * - Resultados intermediários
+ */
 void gerarChaves(int chave, int &k1, int &k2){
     
     if(imprimir){

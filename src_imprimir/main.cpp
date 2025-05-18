@@ -1,5 +1,21 @@
+/**
+ * @file main.cpp
+ * @brief Interface interativa principal para testes com o algoritmo S-DES
+ * @note Esta versão fornece um menu para acessar testes com chave, bloco e mensagem
+ * 
+ * @see src/sdes.cpp para versão completa e estruturada para uso em produção
+ * @debug Ativa logs dependendo das escolhas de saída feitas pelo usuário
+ */
 #include "input.hpp"
 
+/**
+ * @brief Função principal com menu interativo para testes com S-DES
+ * 
+ * Opções disponíveis:
+ * - Gerar subchaves
+ * - Cifrar/decifrar um bloco
+ * - Cifrar/decifrar uma mensagem (ECB ou CBC)
+ */
 int main(){
     cout << "----------- S-DES ---------------\n\n";
     int opcao;

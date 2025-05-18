@@ -1,6 +1,19 @@
+/**
+ * @file input.hpp
+ * @brief Entrada interativa para testes de encriptação S-DES com logs
+ * @note Esta versão recebe entradas com valores padrão e leitura manual
+ * @debug Ativa logs de geração de chaves, blocos e mensagens se `imprimir` estiver ativo
+ * 
+ * @see src/input.hpp para documentação completa das funções
+ */
+
 #include "modes.hpp"
 
-// menu de leitura de chave
+/**
+ * @brief Lê uma chave de 10 bits do usuário ou usa padrão
+ * @return Chave convertida para inteiro
+ * @debug Mostra mensagens de validação interativa
+ */
 int lerChave(){
     string chave10 = "1010000010"; // chave padrão
     cout << "Deseja usar a chave padrão (1010000010)? (s/n): ";
@@ -17,7 +30,11 @@ int lerChave(){
     return toInt(chave10, 10);
 }
 
-// menu de leitura de bloco
+/**
+ * @brief Lê um bloco de 8 bits do usuário ou usa padrão
+ * @return Bloco convertido para inteiro
+ * @debug Mostra mensagens de validação interativa
+ */
 int lerBloco(){
     string bloco = "11010111";
     cout << "Deseja usar o bloco padrão (11010111)? (s/n): ";
@@ -34,7 +51,11 @@ int lerBloco(){
     return toInt(bloco, 8);
 }
 
-// menu de leitura de mensagem
+/**
+ * @brief Lê uma mensagem (múltiplos de 8 bits) do usuário ou usa padrão
+ * @return Vetor com blocos de 8 bits
+ * @debug Mostra mensagens de validação interativa
+ */
 vector<string> lerMenssagem(){
     string mensagemS = "11010111 01101100 10111010 11110000";
     vector<string> mensagemV = separaMensagem(mensagemS);
@@ -54,7 +75,12 @@ vector<string> lerMenssagem(){
     return mensagemV;
 }
 
-// menu de leitura do vetor de inicializacao para CBC
+
+/**
+ * @brief Lê o vetor de inicialização (IV) de 8 bits ou usa padrão
+ * @return IV convertido para inteiro
+ * @debug Mostra mensagens de validação interativa
+ */
 int lerIV(){
     string IVs = "01010101";
     cout << "Deseja usar o vetor de inicialização(IV) padrão (01010101)? (s/n): ";
@@ -71,6 +97,11 @@ int lerIV(){
     return toInt(IVs, 8);
 }
 
+
+/**
+ * @brief Testa geração de subchaves K1 e K2 a partir de uma chave
+ * @debug Ativa logs de geração e permutação
+ */
 void testarGeracaoDeChave() {
     int chave = lerChave();
     int K1, K2;
@@ -78,6 +109,10 @@ void testarGeracaoDeChave() {
     gerarChaves(chave, K1, K2);
 }
 
+/**
+ * @brief Testa a cifragem ou decifragem de um único bloco
+ * @debug Permite escolha entre execução passo a passo ou direta
+ */
 void testarBloco() {
     int chave = lerChave();
     int bloco = lerBloco();
@@ -100,6 +135,10 @@ void testarBloco() {
     cout << "\n===============================================================\n";
 }
 
+/**
+ * @brief Testa a cifragem/decifragem completa de uma mensagem
+ * @debug Suporta modos ECB e CBC com logs detalhados por bloco
+ */
 void testarMensagem() {
     int modoCifra, operacao, mostrarPasso, IV;
 

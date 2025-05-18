@@ -1,5 +1,19 @@
+/**
+ * @file modes.hpp
+ * @brief Implementações dos modos ECB e CBC com suporte a debug
+ * @note Esta versão contém:
+ * - Cabeçalhos de operação formatados
+ * - Logs detalhados para cada bloco, quando `imprimir` está ativado
+ * 
+ * @see src/modes.hpp para documentação completa das funções
+ */
+
 #include "encrypt.hpp"
 
+/**
+ * @brief Imprime cabeçalho formatado para os modos ECB/CBC
+ * @debug Exibe estrutura visual da operação por bloco, de acordo com o modo e tipo
+ */
 void imprimirCabecalho(string tipo, string modo, string chave, string IV=""){
     cout << "\n======================= Modo " << modo << " ========================\n\n";
     cout << "Operação: " << tipo << "\n";
@@ -25,6 +39,11 @@ void imprimirCabecalho(string tipo, string modo, string chave, string IV=""){
     }
 }
 
+
+/**
+ * @brief Encriptação no modo ECB
+ * @debug Mostra entrada/saída de cada bloco
+ */
 string ECB_encripta(vector<string>& plainText, int chave){
     bool imprimiLocal=imprimir; 
     imprimir=false;
@@ -43,6 +62,11 @@ string ECB_encripta(vector<string>& plainText, int chave){
     return cipherText;
 }
 
+
+/**
+ * @brief Decriptação no modo ECB
+ * @debug Mostra entrada/saída de cada bloco
+ */
 string ECB_decripta(vector<string>& cipherText, int chave){
     bool imprimiLocal = imprimir;
     imprimir = false;
@@ -60,6 +84,10 @@ string ECB_decripta(vector<string>& cipherText, int chave){
     return plainText;
 }
 
+/**
+ * @brief Encriptação no modo CBC
+ * @debug Mostra XOR com IV/anterior e resultado cifrado
+ */
 string CBC_encripta(vector<string>& plainText, int chave, int IV){
     bool imprimiLocal = imprimir;
     imprimir = false;
@@ -78,6 +106,10 @@ string CBC_encripta(vector<string>& plainText, int chave, int IV){
     return cipherText;
 } 
 
+/**
+ * @brief Decriptação no modo CBC
+ * @debug Mostra resultado do S-DES e XOR com IV/anterior
+ */
 string CBC_decripta(vector<string> cipherText, int chave, int IV){
     bool imprimiLocal = imprimir;
     imprimir = false;

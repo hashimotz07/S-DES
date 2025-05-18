@@ -1,5 +1,22 @@
+/**
+ * @file encrypt.hpp
+ * @brief Versão com logs de debug - Para documentação completa, consulte src/encrypt.hpp
+ * @note Esta versão contém implementações idênticas às origens, mas com:
+ * - Flags de controle de impressão (imprimir, encriptar)
+ * - Logs detalhados do processo interno
+ * 
+ * @see src/encrypt.hpp para documentação completa das funções
+ */
+
 #include "ffunction.hpp"
 
+/**
+ * @brief Realiza encriptação ou decriptação com base na flag `encriptar`
+ * @debug Mostra:
+ * - Permutações iniciais/finais
+ * - Subchaves geradas
+ * - Resultado das rodadas Feistel
+ */
 int encriptacao(int n, int k){
     int k1, k2;
     bool imprimiPausa = imprimir;
@@ -45,6 +62,9 @@ int encriptacao(int n, int k){
     return n;
 }
 
+/**
+ * @brief Wrapper para decriptação usando `encriptacao` com flag apropriada
+ */
 int decriptacao(int n, int k){
     encriptar = 1;
     n = encriptacao(n, k);

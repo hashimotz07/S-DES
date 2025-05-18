@@ -1,13 +1,34 @@
+/**
+ * @file utils.hpp
+ * @brief Versão com logs de debug - Para documentação completa, consulte src/utils.hpp
+ * @note Esta versão contém implementações idênticas às origens, mas com:
+ * - Flags de controle de impressão (imprimir, encriptar)
+ * - Logs detalhados do processo interno
+ * 
+ * @see src/utils.hpp para documentação completa das funções
+ */
+
 #include <iostream>
 #include <vector>
 #include <string>
 
 using namespace std;
 
+/**
+ * @var imprimir
+ * @brief Ativa/desativa logs detalhados (false=off, true=on)
+ */
 bool imprimir=false;
-int encriptar=1;
+
+
+/**
+ * @var encriptar
+ * @brief Controla modo de operação (1=decriptação, 2=encriptação)
+ */
+int encriptar=2;
 
 // converte o numero inteiro para binario(string)
+// Para documentação completa, ver src/utils.hpp
 string toBin(int n, int sz){
     string bits = "";
     for(int i=sz-1; i >= 0; i--){
@@ -17,6 +38,7 @@ string toBin(int n, int sz){
 }
 
 // converte o numero binario(string) para inteiro
+// Para documentação completa, ver src/utils.hpp
 int toInt(string bits, int sz){
     int num=0;
     for(int i=sz-1, j=0; i >= 0; i--, j++){
