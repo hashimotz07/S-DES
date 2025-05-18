@@ -74,7 +74,7 @@ int feistel(int l, int r, int k1, int k2){
         cout << "    R =                " << toBin(r, 4) << endl;
     }
     swap(l, r);
-    encriptar ^= 3;
+    encriptar ^= 3;   // alterna entre encriptar/decriptar (1 XOR 3 = 2, 2 XOR 3 = 1)
     if(imprimir){
         cout << "\n-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -\n";
         cout << "  Após troca:\n";
