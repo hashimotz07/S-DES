@@ -1,5 +1,5 @@
 /**
- * @file Utils.hpp
+ * @file utils.hpp
  * @brief Utilitários para manipulação de bits, conversões e processamento de mensagens para o algoritmo S-DES
  * @author Iasmim Freitas
  * @author Lucas Hashimoto

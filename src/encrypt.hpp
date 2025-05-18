@@ -1,5 +1,5 @@
 /**
- * @file ffunction.hpp
+ * @file encrypt.hpp
  * @brief Implementação das funções de encriptação e decriptação do algoritmo S-DES
  * @author Iasmim Freitas
  * @author Lucas Hashimoto

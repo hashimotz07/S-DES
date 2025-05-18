@@ -1,5 +1,5 @@
 /**
- * @file keygen.hpp
+ * @file ffunction.hpp
  * @brief Implementação das funções de permutação, S-Box e rede de Feistel para o S-DES.
  * @author Iasmim Freitas
  * @author Lucas Hashimoto

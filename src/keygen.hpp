@@ -1,5 +1,5 @@
 /**
- * @file permutation.cpp
+ * @file keygen.cpp
  * @brief Implementação das funções de deslocamento circular e geração de chaves para o algoritmo S-DES.
  * @author Iasmim Freitas
  * @author Lucas Hashimoto

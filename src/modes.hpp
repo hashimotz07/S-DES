@@ -1,5 +1,5 @@
 /**
- * @file encrypt.hpp
+ * @file modes.hpp
  * @brief Implementação dos modos de operação ECB e CBC para o S-DES
  * @author Iasmim Freitas
  * @author Lucas Hashimoto
@@ -64,7 +64,7 @@ string ECB_decripta(vector<string>& cipherText, int chave){
  */
 string CBC_encripta(vector<string>& plainText, int chave, int IV){
     string cipherText="";
-    int last;
+    int last = IV;
     for(string blocoS : plainText){
         last = toInt(blocoS, 8) ^ last;
         last = encriptacao(last, chave);

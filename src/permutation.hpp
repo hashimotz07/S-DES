@@ -1,5 +1,5 @@
 /**
- * @file utils.cpp
+ * @file permutation.cpp
  * @brief Implementação das tabelas de permutação e função de permutação para o algoritmo S-DES.
  * @author Iasmim Freitas
  * @author Lucas Hashimoto

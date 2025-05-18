@@ -1,5 +1,38 @@
+/**
+ * @file sdes.cpp
+ * @brief Ponto de entrada principal do sistema S-DES
+ * @author Iasmim Freitas
+ * @author Lucas Hashimoto
+ * @date 2025-05
+ * 
+ * @mainpage Sistema de Criptografia S-DES
+ * 
+ * @section intro_sec Introdução
+ * Implementação completa do algoritmo S-DES (Simplified Data Encryption Standard)
+ * com suporte aos modos de operação ECB e CBC.
+ * 
+ * @section features_sec Funcionalidades
+ * - Geração de subchaves K1 e K2
+ * - Encriptação/decriptação de blocos individuais
+ * - Processamento de mensagens com modos de operação ECB e CBC
+ * - Interface interativa por menus
+ */
 #include "input.hpp"
 
+/**
+ * @brief Função principal que implementa o menu interativo
+ * @return int Código de saída (0 para sucesso)
+ * 
+ * @details O menu oferece 3 operações principais:
+ * 1. Teste de geração de subchaves
+ * 2. Teste de bloco individual
+ * 3. Teste de mensagem completa (ECB/CBC)
+ * 
+ * @note O sistema usa:
+ * - Chaves de 10 bits
+ * - Blocos de 8 bits
+ * - IV de 8 bits para CBC
+ */
 int main(){
     cout << "----------- S-DES ---------------\n\n";
     int opcao;
@@ -11,7 +44,7 @@ int main(){
         cout << "0 - Sair\n\nEscolha uma opção: ";
         cin >> opcao;
         cout << endl;
-
+        
         switch (opcao) {
             case 1: testarGeracaoDeChave(); break;
             case 2: testarBloco(); break;
