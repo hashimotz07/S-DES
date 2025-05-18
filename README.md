@@ -47,7 +47,7 @@ S-DES/
 ```
 
 > A separação entre `src/` e `src_imprimir/` foi feita para manter a clareza e facilitar a leitura do código.
-> ℹ️ **Nota:** A documentação das funções está incorporada diretamente nos arquivos da pasta `src/`, usando comentários no padrão do **Doxygen**.  
+> **Nota:** A documentação das funções está incorporada diretamente nos arquivos da pasta `src/`, usando comentários no padrão do **Doxygen**.  
 > Para entender o funcionamento detalhado de cada parte do algoritmo, consulte os cabeçalhos e descrições nos próprios arquivos `.hpp` e `.cpp` dentro da pasta `src/`.
 
 
@@ -98,12 +98,14 @@ sudo apt install build-essential doxygen
 </details> 
 
 <details> <summary><strong>Fedora</strong></summary>
+
 ```bash
 sudo dnf install gcc-c++ make doxygen
 ```
 </details>
 
  <details> <summary><strong>Arch Linux</strong></summary>
+
 ```bash
 sudo pacman -S base-devel doxygen
 ```
@@ -111,10 +113,12 @@ sudo pacman -S base-devel doxygen
 </details> 
 
 <details> <summary><strong>macOS (com Homebrew)</strong></summary>
+
 ```bash
 brew install make doxygen
 ```
 > O `g++` já vem com o Xcode Command Line Tools. Para garantir:
+
 ```bash
 xcode-select --install
 ```
