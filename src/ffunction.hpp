@@ -88,19 +88,6 @@ int F(int n, int k){
 }
 
 /**
- * @brief Etapa individual da rede de Feistel (F + XOR).
- * @param l Bloco esquerdo de 4 bits.
- * @param r Bloco direito de 4 bits.
- * @param k Subchave de 8 bits.
- * @return int Resultado de 4 bits (F(R, k) XOR L).
- */
-int f(int l, int r, int k){
-    int ans = F(r, k) ^ l;
-    return ans;
-}
-
-
-/**
  * @brief Rede de Feistel completa (2 rodadas) para encriptação/decriptação.
  * @param l Bloco esquerdo de 4 bits.
  * @param r Bloco direito de 4 bits.
@@ -109,8 +96,8 @@ int f(int l, int r, int k){
  * @return int Bloco de 8 bits processado.
  */
 int feistel(int l, int r, int k1, int k2){
-    l = f(l, r, k1);
+    l = F(r, k1) ^ l;
     swap(l, r);
-    l = f(l, r, k2);
+    l = F(r, k2) ^ l;
     return ((l << 4) | r);
 }

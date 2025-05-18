@@ -128,12 +128,12 @@ int feistel(int l, int r, int k1, int k2){
         cout << "\n=> Segunda Rodada (com K" << (encriptar^3) << ")\n\n";
     }
 
-    encriptar ^= 3;   // retorna encriptar/decriptar ao padrao
     l = f(l, r, k2);
     if(imprimir){
         cout << "\n  Resultado final da rodada:\n";
         cout << "    L =                " << toBin(l, 4) << endl;
         cout << "    R =                " << toBin(r, 4) << endl;
     }
+    encriptar ^= 3;   // retorna encriptar/decriptar ao padrao
     return ((l << 4) | r);
 }
