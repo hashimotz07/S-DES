@@ -21,7 +21,7 @@ A implementação tem como foco:
 ```
 S-DES/
 ├── docs/ # Documentação e relatório
-│ ├── relatorio.pdf # Relatório final do projeto
+│ ├── trabalhoSeguranca.pdf # Relatório final do projeto
 │ ├── html/ # Criada automaticamente pelo Doxygen (documentação em HTML)
 │ ├── latex/ # Criada automaticamente pelo Doxygen (documentação em LaTeX)
 │ ├── mainpage.dox # Conteúdo da página inicial da documentação do Doxygen
